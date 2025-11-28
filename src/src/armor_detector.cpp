@@ -250,3 +250,12 @@ cv::Mat ArmorDetector::WarpMat(const cv::Mat& img,const std::vector<cv::Point2f>
 
     return imgWarp;
 }
+
+cv::Mat ArmorDetector::testshow(const cv::Mat& image){
+    std::vector<cv::Point2f> light_points=fine_detection(image);
+    
+    cv::Mat result;
+    result=WarpMat(image,light_points);
+
+    return result;
+}

@@ -1,0 +1,14 @@
+{
+    "RaceStage0": {
+        "average_numdetecterror": 0.259,
+        "average_orientationerror": 1.38,
+        "fps": 7,
+        "max_numdetecterror": 0.259,
+        "max_orientationerror": 1.38,
+        "run_id": "1b54fc5d-4fda-4843-a872-6dd90ca0c3ea",
+        "score": 0.0,
+        "target_type": "armor_red_1",
+        "timestamp": "2025-11-28T23:40:53Z"
+    },
+    "team_name": "CVengers"
+}
