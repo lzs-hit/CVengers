@@ -10,7 +10,10 @@
                 "${workspaceFolder}/src/include",
                 "/opt/ros/humble/include/sensor_msgs",
                 "/opt/ros/humble/include/rosidl_runtime_cpp",
-                "/opt/ros/humble/include/rclcpp"
+                "/opt/ros/humble/include/rclcpp",
+                "/opt/ros/humble/include/rcl",
+                "/opt/ros/humble/include/rcutils",
+                "/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

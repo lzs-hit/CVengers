@@ -86,6 +86,8 @@ private:
     int frame_count_ = 0;
 };
 
+
+#ifdef ARMORNODE_MAIN
 /**
  * @brief 主函数
  */
@@ -97,3 +99,4 @@ int main(int argc, char **argv) {
     rclcpp::shutdown();
     return 0;
 }
+#endif

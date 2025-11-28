@@ -1,0 +1,4 @@
+source;share/cvengers_challenge/local_setup.bash
+source;share/cvengers_challenge/local_setup.dsv
+source;share/cvengers_challenge/local_setup.sh
+source;share/cvengers_challenge/local_setup.zsh

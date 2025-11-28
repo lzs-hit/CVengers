@@ -67,7 +67,7 @@ void ArmorDetector::publish_armor_result(const std::vector<cv::Point2f>& armor_p
     msg_object->header.frame_id = "camera_frame";
 
     referee_pkg::msg::Object obj;
-    obj.target_type = "armor_red_unknown";
+    obj.target_type = "armor_red_1";
     
     for (int j = 0; j < 4; j++) {
         geometry_msgs::msg::Point corner;
@@ -181,15 +181,15 @@ std::vector<cv::Point2f> ArmorDetector::calculate_armor_points(const std::vector
             tool_points.push_back(sorted_points[7]);
             
             if(tool_points[3].x < tool_points[1].x){
-                armor_points.push_back(sorted_points[0]);
-                armor_points.push_back(sorted_points[2]);
-                armor_points.push_back(sorted_points[3]);
-                armor_points.push_back(sorted_points[1]);
+                armor_points.push_back(sorted_points[0]);//左下
+                armor_points.push_back(sorted_points[1]);//右下
+                armor_points.push_back(sorted_points[3]);//右上
+                armor_points.push_back(sorted_points[2]);//左上
             } else {
-                armor_points.push_back(sorted_points[1]);
-                armor_points.push_back(sorted_points[3]);
-                armor_points.push_back(sorted_points[2]);
-                armor_points.push_back(sorted_points[0]);            
+                armor_points.push_back(sorted_points[1]);//左下
+                armor_points.push_back(sorted_points[0]);//右下
+                armor_points.push_back(sorted_points[2]);//右上
+                armor_points.push_back(sorted_points[3]);//左上
             }
         } else {
             // 策略2：处理水平分布的灯条
@@ -208,10 +208,10 @@ std::vector<cv::Point2f> ArmorDetector::calculate_armor_points(const std::vector
             });
             
             // 构建装甲板四个角点
-            armor_points.push_back(first_four[0]);
-            armor_points.push_back(last_four[0]);
-            armor_points.push_back(last_four[3]);
-            armor_points.push_back(first_four[3]);
+            armor_points.push_back(first_four[0]);//左下
+            armor_points.push_back(first_four[3]);//右下
+            armor_points.push_back(last_four[3]);//右上
+            armor_points.push_back(last_four[0]);//左上
         }
         RCLCPP_INFO(node_->get_logger(), "成功提取装甲板坐标，共 %zu 个点", armor_points.size());
     } else {
@@ -221,11 +221,32 @@ std::vector<cv::Point2f> ArmorDetector::calculate_armor_points(const std::vector
     // 输出坐标信息
     if (armor_points.size() >= 4) {
         RCLCPP_INFO(node_->get_logger(), 
-                "(%.1f,%.1f),(%.1f,%.1f),(%.1f,%.1f),(%.1f,%.1f)", 
+                "点1(%.1f,%.1f),点2(%.1f,%.1f),点3(%.1f,%.1f),点4(%.1f,%.1f)", 
                 armor_points[0].x, armor_points[0].y,
                 armor_points[1].x, armor_points[1].y,
                 armor_points[2].x, armor_points[2].y,
                 armor_points[3].x, armor_points[3].y);
     }
     return armor_points;
+}
+
+cv::Mat ArmorDetector::WarpMat(const cv::Mat& img,const std::vector<cv::Point2f>& light_points){
+    if (light_points.size() != 4) {
+        RCLCPP_ERROR(node_->get_logger(), "未能提取出数字影像");
+        return cv::Mat();
+    }
+
+    cv::Mat matrix, imgWarp;
+	float w = 128, h = 128;
+
+    cv::Point2f src[4] ;
+    for(int i=0;i<4;i++){
+        src[i]=light_points[i];
+    }
+	cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{0.4375*w,0.75*h},{0.4375*w,0.25*h},{-0.4375*w,0.25*h} };
+
+    matrix = getPerspectiveTransform(src, dst);
+	warpPerspective(img, imgWarp, matrix, cv::Point(w, h));
+
+    return imgWarp;
 }

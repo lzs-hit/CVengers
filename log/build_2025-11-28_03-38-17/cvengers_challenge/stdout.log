@@ -1,0 +1,3 @@
+[ 14%] [32mBuilding CXX object CMakeFiles/train_digit_model.dir/src/train_digit_model.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/train_digit_model.dir/src/src/mlp_trainer.cpp.o[0m
+[ 85%] Built target armor_node

@@ -65,6 +65,8 @@ private:
      */
     std::vector<cv::Point2f> calculate_armor_points(const std::vector<cv::Point2f>& all_rectangles_points);
 
+    cv::Mat WarpMat(const cv::Mat& img,const std::vector<cv::Point2f>& armor_points);
+
     // ROS2相关
     rclcpp::Node* node_;
     rclcpp::Publisher<referee_pkg::msg::MultiObject>::SharedPtr target_pub_;

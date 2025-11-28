@@ -1,0 +1,25 @@
+[01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:[m[K In member function ‘[01m[Kcv::Mat ArmorDetector::WarpMat(const cv::Mat&, const std::vector<cv::Point_<float> >&)[m[K’:
+[01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:40:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(-4.375e-1 * ((double)w))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  246 |         cv::Point2f dst[4] = { {[01;35m[K-0.4375*w[m[K,0.75*h},{0.4375*w,0.75*h},{0.4375*w,0.25*h},{-0.4375*w,0.25*h} };
+      |                                 [01;35m[K~~~~~~~^~[m[K
+[01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:47:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(7.5e-1 * ((double)h))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  246 |         cv::Point2f dst[4] = { {-0.4375*w,[01;35m[K0.75*h[m[K},{0.4375*w,0.75*h},{0.4375*w,0.25*h},{-0.4375*w,0.25*h} };
+      |                                           [01;35m[K~~~~^~[m[K
+[01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:58:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(4.375e-1 * ((double)w))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  246 |         cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{[01;35m[K0.4375*w[m[K,0.75*h},{0.4375*w,0.25*h},{-0.4375*w,0.25*h} };
+      |                                                    [01;35m[K~~~~~~^~[m[K
+[01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:65:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(7.5e-1 * ((double)h))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  246 |         cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{0.4375*w,[01;35m[K0.75*h[m[K},{0.4375*w,0.25*h},{-0.4375*w,0.25*h} };
+      |                                                             [01;35m[K~~~~^~[m[K
+[01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:76:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(4.375e-1 * ((double)w))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  246 |         cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{0.4375*w,0.75*h},{[01;35m[K0.4375*w[m[K,0.25*h},{-0.4375*w,0.25*h} };
+      |                                                                      [01;35m[K~~~~~~^~[m[K
+[01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:83:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(2.5e-1 * ((double)h))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  246 |         cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{0.4375*w,0.75*h},{0.4375*w,[01;35m[K0.25*h[m[K},{-0.4375*w,0.25*h} };
+      |                                                                               [01;35m[K~~~~^~[m[K
+[01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:95:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(-4.375e-1 * ((double)w))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  246 |         cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{0.4375*w,0.75*h},{0.4375*w,0.25*h},{[01;35m[K-0.4375*w[m[K,0.25*h} };
+      |                                                                                        [01;35m[K~~~~~~~^~[m[K
+[01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:102:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(2.5e-1 * ((double)h))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  246 |         cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{0.4375*w,0.75*h},{0.4375*w,0.25*h},{-0.4375*w,[01;35m[K0.25*h[m[K} };
+      |                                                                                                  [01;35m[K~~~~^~[m[K

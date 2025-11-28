@@ -1,0 +1,38 @@
+[0.006s] Invoking command in '/home/lzs/CVengers_challenge/build/cvengers_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lzs/CVengers_challenge/build/cvengers_challenge -- -j24 -l24
+[0.025s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.085s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[0.097s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.098s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.100s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.105s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.109s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.121s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.122s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.172s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.191s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.202s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.205s] -- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)
+[0.216s] -- Found pose_msg: 0.0.0 (/home/lzs/Vision_Arena_2025/install/pose_msg/share/pose_msg/cmake)
+[0.221s] -- Found referee_pkg: 0.0.0 (/home/lzs/Vision_Arena_2025/install/referee_pkg/share/referee_pkg/cmake)
+[0.227s] -- Found armor_recognition_interfaces: 1.0.0 (/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/share/armor_recognition_interfaces/cmake)
+[0.264s] -- Configuring done
+[0.272s] -- Generating done
+[0.274s] -- Build files have been written to: /home/lzs/CVengers_challenge/build/cvengers_challenge
+[0.298s] [35m[1mConsolidate compiler generated dependencies of target armor_node[0m
+[0.301s] [ 14%] [32mBuilding CXX object CMakeFiles/train_digit_model.dir/src/train_digit_model.cpp.o[0m
+[0.301s] [ 28%] [32mBuilding CXX object CMakeFiles/train_digit_model.dir/src/src/mlp_trainer.cpp.o[0m
+[0.308s] [ 85%] Built target armor_node
+[0.308s] [01m[K/home/lzs/CVengers_challenge/src/train_digit_model.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.hpp: 没有那个文件或目录
+[0.308s]     1 | #include [01;31m[K<rclcpp/rclcpp.hpp>[m[K
+[0.308s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[0.308s] compilation terminated.
+[0.309s] gmake[2]: *** [CMakeFiles/train_digit_model.dir/build.make:76：CMakeFiles/train_digit_model.dir/src/train_digit_model.cpp.o] 错误 1
+[0.309s] gmake[2]: *** 正在等待未完成的任务....
+[0.358s] [01m[K/home/lzs/CVengers_challenge/src/src/mlp_trainer.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.hpp: 没有那个文件或目录
+[0.358s]     2 | #include [01;31m[K<rclcpp/rclcpp.hpp>[m[K
+[0.358s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[0.359s] compilation terminated.
+[0.360s] gmake[2]: *** [CMakeFiles/train_digit_model.dir/build.make:90：CMakeFiles/train_digit_model.dir/src/src/mlp_trainer.cpp.o] 错误 1
+[0.360s] gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/train_digit_model.dir/all] 错误 2
+[0.360s] gmake: *** [Makefile:146：all] 错误 2
+[0.364s] Invoked command in '/home/lzs/CVengers_challenge/build/cvengers_challenge' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lzs/CVengers_challenge/build/cvengers_challenge -- -j24 -l24

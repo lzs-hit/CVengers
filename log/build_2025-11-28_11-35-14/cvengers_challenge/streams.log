@@ -1,0 +1,38 @@
+[0.008s] Invoking command in '/home/lzs/CVengers_challenge/build/cvengers_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lzs/CVengers_challenge/build/cvengers_challenge -- -j24 -l24
+[0.048s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.133s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[0.158s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.160s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.164s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.171s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.181s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.203s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.205s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.277s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.308s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.325s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.330s] -- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)
+[0.350s] -- Found pose_msg: 0.0.0 (/home/lzs/Vision_Arena_2025/install/pose_msg/share/pose_msg/cmake)
+[0.359s] -- Found referee_pkg: 0.0.0 (/home/lzs/Vision_Arena_2025/install/referee_pkg/share/referee_pkg/cmake)
+[0.367s] -- Found armor_recognition_interfaces: 1.0.0 (/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/share/armor_recognition_interfaces/cmake)
+[0.379s] [31mCMake Error at CMakeLists.txt:27 (find_package):
+[0.379s]   By not providing "FindTorch.cmake" in CMAKE_MODULE_PATH this project has
+[0.379s]   asked CMake to find a package configuration file provided by "Torch", but
+[0.379s]   CMake did not find one.
+[0.379s] 
+[0.379s]   Could not find a package configuration file provided by "Torch" with any of
+[0.379s]   the following names:
+[0.379s] 
+[0.379s]     TorchConfig.cmake
+[0.379s]     torch-config.cmake
+[0.379s] 
+[0.380s]   Add the installation prefix of "Torch" to CMAKE_PREFIX_PATH or set
+[0.380s]   "Torch_DIR" to a directory containing one of the above files.  If "Torch"
+[0.380s]   provides a separate development package or SDK, be sure it has been
+[0.380s]   installed.
+[0.380s] 
+[0.380s] [0m
+[0.380s] -- Configuring incomplete, errors occurred!
+[0.380s] See also "/home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles/CMakeOutput.log".
+[0.385s] gmake: *** [Makefile:419：cmake_check_build_system] 错误 1
+[0.386s] Invoked command in '/home/lzs/CVengers_challenge/build/cvengers_challenge' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lzs/CVengers_challenge/build/cvengers_challenge -- -j24 -l24
