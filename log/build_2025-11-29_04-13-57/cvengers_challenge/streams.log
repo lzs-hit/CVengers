@@ -1,0 +1,11 @@
+[0.023s] Invoking command in '/home/lzs/CVengers_challenge/build/cvengers_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lzs/CVengers_challenge/build/cvengers_challenge -- -j24 -l24
+[0.110s] [35m[1mConsolidate compiler generated dependencies of target armor_node[0m
+[0.188s] [ 14%] [32mBuilding CXX object CMakeFiles/armor_node.dir/src/vision_node.cpp.o[0m
+[21.573s] [ 28%] [32m[1mLinking CXX executable armor_node[0m
+[25.626s] /usr/bin/ld: CMakeFiles/armor_node.dir/src/vision_node.cpp.o: in function `ArmorNode::ArmorNode()':
+[25.626s] vision_node.cpp:(.text._ZN9ArmorNodeC2Ev[_ZN9ArmorNodeC5Ev]+0x85f): undefined reference to `ArmorDetector::set_digit_recognizer(std::shared_ptr<LibtorchDigitRecognizer>)'
+[25.735s] collect2: error: ld returned 1 exit status
+[25.736s] gmake[2]: *** [CMakeFiles/armor_node.dir/build.make:1511：armor_node] 错误 1
+[25.737s] gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/armor_node.dir/all] 错误 2
+[25.737s] gmake: *** [Makefile:146：all] 错误 2
+[25.747s] Invoked command in '/home/lzs/CVengers_challenge/build/cvengers_challenge' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lzs/CVengers_challenge/build/cvengers_challenge -- -j24 -l24

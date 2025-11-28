@@ -1,0 +1,34 @@
+[0.013s] Invoking command in '/home/lzs/CVengers_challenge/build/cvengers_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lzs/CVengers_challenge/build/cvengers_challenge -- -j24 -l24
+[0.098s] [35m[1mConsolidate compiler generated dependencies of target armor_node[0m
+[0.166s] [ 14%] [32mBuilding CXX object CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.o[0m
+[17.227s] [ 28%] [32m[1mLinking CXX executable armor_node[0m
+[21.280s] [ 71%] Built target armor_node
+[21.360s] [100%] Built target train_digit_model_cpp
+[21.383s] Invoked command in '/home/lzs/CVengers_challenge/build/cvengers_challenge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lzs/CVengers_challenge/build/cvengers_challenge -- -j24 -l24
+[21.387s] Invoking command in '/home/lzs/CVengers_challenge/build/cvengers_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lzs/CVengers_challenge/build/cvengers_challenge
+[21.403s] -- Install configuration: ""
+[21.403s] -- Installing: /home/lzs/CVengers_challenge/install/cvengers_challenge/lib/cvengers_challenge/armor_node
+[21.417s] -- Set runtime path of "/home/lzs/CVengers_challenge/install/cvengers_challenge/lib/cvengers_challenge/armor_node" to ""
+[21.417s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/lib/cvengers_challenge/train_digit_model_cpp
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/launch/launch
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/launch/launch/shooter.launch.py
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/launch/launch/vision.launch.py
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/config
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/config/params.yaml
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/ament_index/resource_index/package_run_dependencies/cvengers_challenge
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/ament_index/resource_index/parent_prefix_path/cvengers_challenge
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/environment/ament_prefix_path.sh
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/environment/ament_prefix_path.dsv
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/environment/path.sh
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/environment/path.dsv
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/local_setup.bash
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/local_setup.sh
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/local_setup.zsh
+[21.418s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/local_setup.dsv
+[21.418s] -- Installing: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/package.dsv
+[21.419s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/ament_index/resource_index/packages/cvengers_challenge
+[21.419s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/cmake/ament_cmake_export_dependencies-extras.cmake
+[21.419s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/cmake/cvengers_challengeConfig.cmake
+[21.419s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/cmake/cvengers_challengeConfig-version.cmake
+[21.419s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/package.xml
+[21.421s] Invoked command in '/home/lzs/CVengers_challenge/build/cvengers_challenge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lzs/CVengers_challenge/build/cvengers_challenge

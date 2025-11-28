@@ -1,0 +1,140 @@
+[0.000000] (-) TimerEvent: {}
+[0.000358] (cvengers_challenge) JobQueued: {'identifier': 'cvengers_challenge', 'dependencies': OrderedDict()}
+[0.000380] (cvengers_challenge) JobStarted: {'identifier': 'cvengers_challenge'}
+[0.006120] (cvengers_challenge) JobProgress: {'identifier': 'cvengers_challenge', 'progress': 'cmake'}
+[0.006739] (cvengers_challenge) JobProgress: {'identifier': 'cvengers_challenge', 'progress': 'build'}
+[0.006753] (cvengers_challenge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lzs/CVengers_challenge/build/cvengers_challenge', '--', '-j24', '-l24'], 'cwd': '/home/lzs/CVengers_challenge/build/cvengers_challenge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'lzs'), ('LC_TIME', 'zh_CN.UTF-8'), ('DDSGEN', '/home/lzs/fastdds_ws/src/fastddsgen/scripts'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lzs/Vision_Arena_2025/install/target_model_pkg/lib:/home/lzs/Vision_Arena_2025/install/stop/lib:/home/lzs/Vision_Arena_2025/install/sin/lib:/home/lzs/Vision_Arena_2025/install/rm_run/lib:/home/lzs/Vision_Arena_2025/install/rect_move/lib:/home/lzs/Vision_Arena_2025/install/circle/lib:/home/lzs/Vision_Arena_2025/install/arrow_run/lib:/home/lzs/Vision_Arena_2025/install/referee_pkg/lib:/home/lzs/Vision_Arena_2025/install/camera/lib:/home/lzs/Vision_Arena_2025/install/pose_msg/lib:/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/lib:/home/lzs/Vision_Arena_2025/libtorch/lib:/home/lzs/fastdds_ws/install/fastdds/lib:/home/lzs/fastdds_ws/install/fastcdr/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/lzs'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2748'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=b5b0c5906fa166bc4825146e6929fcd5'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/lzs/CVengers_challenge/install:/home/lzs/fastdds_ws/install:/home/lzs/Vision_Arena_2025/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'lzs'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/lzs/fastdds_ws/install/foonathan_memory_vendor/lib/x86_64-linux-gnu/pkgconfig:/home/lzs/fastdds_ws/install/foonathan_memory_vendor/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'lzs'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models::/home/lzs/Vision_Arena_2025/resource/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/lzs/fastdds_ws/install/fastdds/bin:/opt/ros/humble/bin:/home/lzs/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lzs/fastdds_ws/gradle-6.4/bin'), ('SESSION_MANAGER', 'local/lzs-TX:@/tmp/.ICE-unix/2748,unix/lzs-TX:/tmp/.ICE-unix/2748'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d5b4ab9e_b7fb_410e_b464_3343d9f3583c'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.128'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('ROSDISTRO_INDEX_URL', 'https://mirrors.tuna.tsinghua.edu.cn/rosdistro/index-v4.yaml'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/lzs/CVengers_challenge/install/cvengers_challenge:/home/lzs/Vision_Arena_2025/install/target_model_pkg:/home/lzs/Vision_Arena_2025/install/stop:/home/lzs/Vision_Arena_2025/install/sin:/home/lzs/Vision_Arena_2025/install/rm_run:/home/lzs/Vision_Arena_2025/install/rect_pkg:/home/lzs/Vision_Arena_2025/install/rect_move:/home/lzs/Vision_Arena_2025/install/player_pkg:/home/lzs/Vision_Arena_2025/install/circle:/home/lzs/Vision_Arena_2025/install/arrow_run:/home/lzs/Vision_Arena_2025/install/armor_detector_pkg:/home/lzs/Vision_Arena_2025/install/referee_pkg:/home/lzs/Vision_Arena_2025/install/camera:/home/lzs/Vision_Arena_2025/install/pose_msg:/home/lzs/Vision_Arena_2025/install/number_recognition_pkg:/home/lzs/Vision_Arena_2025/install/camera_sim_pkg:/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11::/home/lzs/Vision_Arena_2025/resource'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/lzs/CVengers_challenge/build/cvengers_challenge'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=b5b0c5906fa166bc4825146e6929fcd5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lzs/Vision_Arena_2025/install/referee_pkg/local/lib/python3.10/dist-packages:/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/lzs/CVengers_challenge/install/cvengers_challenge:/home/lzs/Vision_Arena_2025/install/target_model_pkg:/home/lzs/Vision_Arena_2025/install/stop:/home/lzs/Vision_Arena_2025/install/sin:/home/lzs/Vision_Arena_2025/install/rm_run:/home/lzs/Vision_Arena_2025/install/rect_pkg:/home/lzs/Vision_Arena_2025/install/rect_move:/home/lzs/Vision_Arena_2025/install/player_pkg:/home/lzs/Vision_Arena_2025/install/circle:/home/lzs/Vision_Arena_2025/install/arrow_run:/home/lzs/Vision_Arena_2025/install/armor_detector_pkg:/home/lzs/Vision_Arena_2025/install/referee_pkg:/home/lzs/Vision_Arena_2025/install/camera:/home/lzs/Vision_Arena_2025/install/pose_msg:/home/lzs/Vision_Arena_2025/install/number_recognition_pkg:/home/lzs/Vision_Arena_2025/install/camera_sim_pkg:/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces:/home/lzs/fastdds_ws/install/fastdds:/home/lzs/fastdds_ws/install/foonathan_memory_vendor:/home/lzs/fastdds_ws/install/fastcdr:/opt/ros/humble')]), 'shell': False}
+[0.077045] (cvengers_challenge) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_node\x1b[0m\n'}
+[0.099944] (-) TimerEvent: {}
+[0.113695] (cvengers_challenge) StdoutLine: {'line': b'[ 28%] Built target train_digit_model_cpp\n'}
+[0.131628] (cvengers_challenge) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/armor_node.dir/src/vision_node.cpp.o\x1b[0m\n'}
+[0.133098] (cvengers_challenge) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.o\x1b[0m\n'}
+[0.133526] (cvengers_challenge) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o\x1b[0m\n'}
+[0.200206] (-) TimerEvent: {}
+[0.300589] (-) TimerEvent: {}
+[0.400982] (-) TimerEvent: {}
+[0.501340] (-) TimerEvent: {}
+[0.601803] (-) TimerEvent: {}
+[0.702182] (-) TimerEvent: {}
+[0.802604] (-) TimerEvent: {}
+[0.903538] (-) TimerEvent: {}
+[1.003952] (-) TimerEvent: {}
+[1.104368] (-) TimerEvent: {}
+[1.204679] (-) TimerEvent: {}
+[1.305077] (-) TimerEvent: {}
+[1.405484] (-) TimerEvent: {}
+[1.505885] (-) TimerEvent: {}
+[1.606303] (-) TimerEvent: {}
+[1.706709] (-) TimerEvent: {}
+[1.807116] (-) TimerEvent: {}
+[1.907456] (-) TimerEvent: {}
+[2.007847] (-) TimerEvent: {}
+[2.108248] (-) TimerEvent: {}
+[2.208686] (-) TimerEvent: {}
+[2.309084] (-) TimerEvent: {}
+[2.409508] (-) TimerEvent: {}
+[2.509914] (-) TimerEvent: {}
+[2.610233] (-) TimerEvent: {}
+[2.710814] (-) TimerEvent: {}
+[2.811306] (-) TimerEvent: {}
+[2.911710] (-) TimerEvent: {}
+[3.012105] (-) TimerEvent: {}
+[3.112508] (-) TimerEvent: {}
+[3.212918] (-) TimerEvent: {}
+[3.313517] (-) TimerEvent: {}
+[3.413922] (-) TimerEvent: {}
+[3.514260] (-) TimerEvent: {}
+[3.614665] (-) TimerEvent: {}
+[3.715090] (-) TimerEvent: {}
+[3.815499] (-) TimerEvent: {}
+[3.915886] (-) TimerEvent: {}
+[4.016231] (-) TimerEvent: {}
+[4.116574] (-) TimerEvent: {}
+[4.216998] (-) TimerEvent: {}
+[4.317417] (-) TimerEvent: {}
+[4.417847] (-) TimerEvent: {}
+[4.518275] (-) TimerEvent: {}
+[4.618618] (-) TimerEvent: {}
+[4.719025] (-) TimerEvent: {}
+[4.819406] (-) TimerEvent: {}
+[4.919819] (-) TimerEvent: {}
+[5.020210] (-) TimerEvent: {}
+[5.120537] (-) TimerEvent: {}
+[5.220895] (-) TimerEvent: {}
+[5.321309] (-) TimerEvent: {}
+[5.421705] (-) TimerEvent: {}
+[5.522128] (-) TimerEvent: {}
+[5.622544] (-) TimerEvent: {}
+[5.722940] (-) TimerEvent: {}
+[5.823330] (-) TimerEvent: {}
+[5.923744] (-) TimerEvent: {}
+[6.024185] (-) TimerEvent: {}
+[6.124601] (-) TimerEvent: {}
+[6.225014] (-) TimerEvent: {}
+[6.325492] (-) TimerEvent: {}
+[6.425824] (-) TimerEvent: {}
+[6.526221] (-) TimerEvent: {}
+[6.626616] (-) TimerEvent: {}
+[6.727005] (-) TimerEvent: {}
+[6.827405] (-) TimerEvent: {}
+[6.927762] (-) TimerEvent: {}
+[7.028127] (-) TimerEvent: {}
+[7.128542] (-) TimerEvent: {}
+[7.228926] (-) TimerEvent: {}
+[7.329347] (-) TimerEvent: {}
+[7.429755] (-) TimerEvent: {}
+[7.530194] (-) TimerEvent: {}
+[7.630578] (-) TimerEvent: {}
+[7.730928] (-) TimerEvent: {}
+[7.831291] (-) TimerEvent: {}
+[7.931693] (-) TimerEvent: {}
+[8.032063] (-) TimerEvent: {}
+[8.132495] (-) TimerEvent: {}
+[8.232908] (-) TimerEvent: {}
+[8.333262] (-) TimerEvent: {}
+[8.433652] (-) TimerEvent: {}
+[8.533952] (-) TimerEvent: {}
+[8.634305] (-) TimerEvent: {}
+[8.734656] (-) TimerEvent: {}
+[8.834992] (-) TimerEvent: {}
+[8.935319] (-) TimerEvent: {}
+[9.035631] (-) TimerEvent: {}
+[9.135922] (-) TimerEvent: {}
+[9.236217] (-) TimerEvent: {}
+[9.336526] (-) TimerEvent: {}
+[9.436806] (-) TimerEvent: {}
+[9.537107] (-) TimerEvent: {}
+[9.637475] (-) TimerEvent: {}
+[9.737802] (-) TimerEvent: {}
+[9.838151] (-) TimerEvent: {}
+[9.938542] (-) TimerEvent: {}
+[10.038866] (-) TimerEvent: {}
+[10.139254] (-) TimerEvent: {}
+[10.232087] (cvengers_challenge) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX executable armor_node\x1b[0m\n'}
+[10.239334] (-) TimerEvent: {}
+[10.339609] (-) TimerEvent: {}
+[10.440050] (-) TimerEvent: {}
+[10.540543] (-) TimerEvent: {}
+[10.641022] (-) TimerEvent: {}
+[10.741524] (-) TimerEvent: {}
+[10.841895] (-) TimerEvent: {}
+[10.942283] (-) TimerEvent: {}
+[11.042623] (-) TimerEvent: {}
+[11.143373] (-) TimerEvent: {}
+[11.243815] (-) TimerEvent: {}
+[11.344196] (-) TimerEvent: {}
+[11.444584] (-) TimerEvent: {}
+[11.544964] (-) TimerEvent: {}
+[11.645386] (-) TimerEvent: {}
+[11.745780] (-) TimerEvent: {}
+[11.846164] (-) TimerEvent: {}
+[11.917467] (cvengers_challenge) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/armor_node.dir/src/vision_node.cpp.o: in function `ArmorNode::image_callback(std::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > >)':\n"}
+[11.917676] (cvengers_challenge) StderrLine: {'line': b"vision_node.cpp:(.text._ZN9ArmorNode14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE[_ZN9ArmorNode14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE]+0xbe): undefined reference to `ArmorDetector::testshow(cv::Mat const&)'\n"}
+[11.946300] (-) TimerEvent: {}
+[11.957711] (cvengers_challenge) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[11.961518] (cvengers_challenge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/armor_node.dir/build.make:1511\xef\xbc\x9aarmor_node] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[11.962301] (cvengers_challenge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139\xef\xbc\x9aCMakeFiles/armor_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[11.962424] (cvengers_challenge) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[11.964594] (cvengers_challenge) CommandEnded: {'returncode': 2}
+[11.973198] (cvengers_challenge) JobEnded: {'identifier': 'cvengers_challenge', 'rc': 2}
+[11.983568] (-) EventReactorShutdown: {}

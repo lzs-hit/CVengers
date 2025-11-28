@@ -1,0 +1,14 @@
+[0.007s] Invoking command in '/home/lzs/CVengers_challenge/build/cvengers_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lzs/CVengers_challenge/build/cvengers_challenge -- -j24 -l24
+[0.077s] [35m[1mConsolidate compiler generated dependencies of target armor_node[0m
+[0.113s] [ 28%] Built target train_digit_model_cpp
+[0.131s] [ 42%] [32mBuilding CXX object CMakeFiles/armor_node.dir/src/vision_node.cpp.o[0m
+[0.133s] [ 71%] [32mBuilding CXX object CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.o[0m
+[0.133s] [ 71%] [32mBuilding CXX object CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o[0m
+[10.232s] [ 85%] [32m[1mLinking CXX executable armor_node[0m
+[11.917s] /usr/bin/ld: CMakeFiles/armor_node.dir/src/vision_node.cpp.o: in function `ArmorNode::image_callback(std::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > >)':
+[11.917s] vision_node.cpp:(.text._ZN9ArmorNode14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE[_ZN9ArmorNode14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE]+0xbe): undefined reference to `ArmorDetector::testshow(cv::Mat const&)'
+[11.957s] collect2: error: ld returned 1 exit status
+[11.961s] gmake[2]: *** [CMakeFiles/armor_node.dir/build.make:1511：armor_node] 错误 1
+[11.962s] gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/armor_node.dir/all] 错误 2
+[11.962s] gmake: *** [Makefile:146：all] 错误 2
+[11.964s] Invoked command in '/home/lzs/CVengers_challenge/build/cvengers_challenge' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lzs/CVengers_challenge/build/cvengers_challenge -- -j24 -l24

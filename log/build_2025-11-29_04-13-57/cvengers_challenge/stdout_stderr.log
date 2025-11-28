@@ -1,0 +1,9 @@
+[35m[1mConsolidate compiler generated dependencies of target armor_node[0m
+[ 14%] [32mBuilding CXX object CMakeFiles/armor_node.dir/src/vision_node.cpp.o[0m
+[ 28%] [32m[1mLinking CXX executable armor_node[0m
+/usr/bin/ld: CMakeFiles/armor_node.dir/src/vision_node.cpp.o: in function `ArmorNode::ArmorNode()':
+vision_node.cpp:(.text._ZN9ArmorNodeC2Ev[_ZN9ArmorNodeC5Ev]+0x85f): undefined reference to `ArmorDetector::set_digit_recognizer(std::shared_ptr<LibtorchDigitRecognizer>)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/armor_node.dir/build.make:1511：armor_node] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/armor_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

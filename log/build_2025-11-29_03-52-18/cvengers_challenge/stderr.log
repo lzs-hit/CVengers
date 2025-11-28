@@ -1,0 +1,6 @@
+/usr/bin/ld: CMakeFiles/armor_node.dir/src/vision_node.cpp.o: in function `ArmorNode::image_callback(std::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > >)':
+vision_node.cpp:(.text._ZN9ArmorNode14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE[_ZN9ArmorNode14image_callbackESt10shared_ptrIN11sensor_msgs3msg6Image_ISaIvEEEE]+0xbe): undefined reference to `ArmorDetector::testshow(cv::Mat const&)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/armor_node.dir/build.make:1511：armor_node] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/armor_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

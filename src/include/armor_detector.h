@@ -1,6 +1,7 @@
 #pragma once
 
 #include "image_processor.h"
+#include "libtorch_digit_recognizer.h"
 #include <rclcpp/rclcpp.hpp>
 #include <referee_pkg/msg/multi_object.hpp>
 #include <vector>
@@ -30,6 +31,7 @@ public:
      * @return 处理后的图像（包含可视化结果）
      */
     cv::Mat process_frame(const cv::Mat& image);
+    // cv::Mat testshow(const cv::Mat& image);
 
     /**
      * @brief 发布装甲板检测结果
@@ -43,6 +45,8 @@ public:
      */
     void set_publisher(rclcpp::Publisher<referee_pkg::msg::MultiObject>::SharedPtr publisher);
 
+    void set_digit_recognizer(std::shared_ptr<LibtorchDigitRecognizer> recognizer);
+    int num_recognition(cv::Mat img);
 private:
     /**
      * @brief 粗检测模块：通过黑色区域检测初步定位装甲板位置
@@ -66,6 +70,12 @@ private:
     std::vector<cv::Point2f> calculate_armor_points(const std::vector<cv::Point2f>& all_rectangles_points);
 
     cv::Mat WarpMat(const cv::Mat& img,const std::vector<cv::Point2f>& armor_points);
+    int Armor_ID(std::vector<cv::Point2f> armor_points,cv::Mat display_image);
+    
+    /**
+     * @brief 设置数字识别器
+     * @param recognizer Libtorch数字识别器
+     */
 
     // ROS2相关
     rclcpp::Node* node_;
@@ -73,6 +83,9 @@ private:
     
     // 图像处理工具
     std::unique_ptr<ImageProcessor> image_processor_;
+
+    //数字识别
+    std::shared_ptr<LibtorchDigitRecognizer> digit_recognizer_;
     
     // 检测参数
     float expand_ratio_ = 1.1f;

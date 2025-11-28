@@ -1,0 +1,60 @@
+[0.008s] Invoking command in '/home/lzs/CVengers_challenge/build/cvengers_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lzs/CVengers_challenge/build/cvengers_challenge -- -j24 -l24
+[0.049s] [35m[1mConsolidate compiler generated dependencies of target armor_node[0m
+[0.063s] [ 16%] [32mBuilding CXX object CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.o[0m
+[0.065s] [ 33%] [32mBuilding CXX object CMakeFiles/armor_node.dir/src/vision_node.cpp.o[0m
+[0.074s] [ 66%] Built target train_digit_model_cpp
+[1.500s] [01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:[m[K In member function ‘[01m[Kcv::Mat ArmorDetector::WarpMat(const cv::Mat&, const std::vector<cv::Point_<float> >&)[m[K’:
+[1.500s] [01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:40:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(-4.375e-1 * ((double)w))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[1.500s]   246 |         cv::Point2f dst[4] = { {[01;35m[K-0.4375*w[m[K,0.75*h},{0.4375*w,0.75*h},{0.4375*w,0.25*h},{-0.4375*w,0.25*h} };
+[1.500s]       |                                 [01;35m[K~~~~~~~^~[m[K
+[1.500s] [01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:47:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(7.5e-1 * ((double)h))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[1.500s]   246 |         cv::Point2f dst[4] = { {-0.4375*w,[01;35m[K0.75*h[m[K},{0.4375*w,0.75*h},{0.4375*w,0.25*h},{-0.4375*w,0.25*h} };
+[1.500s]       |                                           [01;35m[K~~~~^~[m[K
+[1.500s] [01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:58:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(4.375e-1 * ((double)w))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[1.500s]   246 |         cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{[01;35m[K0.4375*w[m[K,0.75*h},{0.4375*w,0.25*h},{-0.4375*w,0.25*h} };
+[1.500s]       |                                                    [01;35m[K~~~~~~^~[m[K
+[1.500s] [01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:65:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(7.5e-1 * ((double)h))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[1.500s]   246 |         cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{0.4375*w,[01;35m[K0.75*h[m[K},{0.4375*w,0.25*h},{-0.4375*w,0.25*h} };
+[1.500s]       |                                                             [01;35m[K~~~~^~[m[K
+[1.500s] [01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:76:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(4.375e-1 * ((double)w))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[1.500s]   246 |         cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{0.4375*w,0.75*h},{[01;35m[K0.4375*w[m[K,0.25*h},{-0.4375*w,0.25*h} };
+[1.500s]       |                                                                      [01;35m[K~~~~~~^~[m[K
+[1.500s] [01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:83:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(2.5e-1 * ((double)h))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[1.501s]   246 |         cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{0.4375*w,0.75*h},{0.4375*w,[01;35m[K0.25*h[m[K},{-0.4375*w,0.25*h} };
+[1.501s]       |                                                                               [01;35m[K~~~~^~[m[K
+[1.501s] [01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:95:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(-4.375e-1 * ((double)w))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[1.501s]   246 |         cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{0.4375*w,0.75*h},{0.4375*w,0.25*h},{[01;35m[K-0.4375*w[m[K,0.25*h} };
+[1.501s]       |                                                                                        [01;35m[K~~~~~~~^~[m[K
+[1.501s] [01m[K/home/lzs/CVengers_challenge/src/src/armor_detector.cpp:246:102:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(2.5e-1 * ((double)h))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[1.501s]   246 |         cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{0.4375*w,0.75*h},{0.4375*w,0.25*h},{-0.4375*w,[01;35m[K0.25*h[m[K} };
+[1.501s]       |                                                                                                  [01;35m[K~~~~^~[m[K
+[4.484s] [ 83%] [32m[1mLinking CXX executable armor_node[0m
+[4.883s] [100%] Built target armor_node
+[4.894s] Invoked command in '/home/lzs/CVengers_challenge/build/cvengers_challenge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lzs/CVengers_challenge/build/cvengers_challenge -- -j24 -l24
+[4.904s] Invoking command in '/home/lzs/CVengers_challenge/build/cvengers_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lzs/CVengers_challenge/build/cvengers_challenge
+[4.909s] -- Install configuration: ""
+[4.910s] -- Installing: /home/lzs/CVengers_challenge/install/cvengers_challenge/lib/cvengers_challenge/armor_node
+[4.912s] -- Set runtime path of "/home/lzs/CVengers_challenge/install/cvengers_challenge/lib/cvengers_challenge/armor_node" to ""
+[4.912s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/lib/cvengers_challenge/train_digit_model_cpp
+[4.912s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/launch/launch
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/launch/launch/shooter.launch.py
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/launch/launch/vision.launch.py
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/config
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/config/params.yaml
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/ament_index/resource_index/package_run_dependencies/cvengers_challenge
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/ament_index/resource_index/parent_prefix_path/cvengers_challenge
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/environment/ament_prefix_path.sh
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/environment/ament_prefix_path.dsv
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/environment/path.sh
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/environment/path.dsv
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/local_setup.bash
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/local_setup.sh
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/local_setup.zsh
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/local_setup.dsv
+[4.913s] -- Installing: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/package.dsv
+[4.913s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/ament_index/resource_index/packages/cvengers_challenge
+[4.914s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.914s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/cmake/cvengers_challengeConfig.cmake
+[4.914s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/cmake/cvengers_challengeConfig-version.cmake
+[4.914s] -- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/package.xml
+[4.915s] Invoked command in '/home/lzs/CVengers_challenge/build/cvengers_challenge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lzs/CVengers_challenge/build/cvengers_challenge

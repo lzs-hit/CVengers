@@ -51,8 +51,18 @@ add_executable(armor_node
   src/vision_node.cpp
   src/src/image_processor.cpp
   src/src/armor_detector.cpp
+  src/src/libtorch_digit_recognizer.cpp
 )
 
+target_link_libraries(armor_node
+    ${rclcpp_LIBRARIES}
+    ${sensor_msgs_LIBRARIES}
+    ${cv_bridge_LIBRARIES}
+    ${OpenCV_LIBS}
+    ${TORCH_LIBRARIES}
+)
+
+target_include_directories(armor_node PRIVATE ${TORCH_INCLUDE_DIRS})
 target_compile_definitions(armor_node PRIVATE ARMORNODE_MAIN)
 
 #为目标添加依赖

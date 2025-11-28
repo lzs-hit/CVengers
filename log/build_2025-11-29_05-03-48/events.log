@@ -1,0 +1,141 @@
+[0.000000] (-) TimerEvent: {}
+[0.000347] (cvengers_challenge) JobQueued: {'identifier': 'cvengers_challenge', 'dependencies': OrderedDict()}
+[0.000393] (cvengers_challenge) JobStarted: {'identifier': 'cvengers_challenge'}
+[0.005734] (cvengers_challenge) JobProgress: {'identifier': 'cvengers_challenge', 'progress': 'cmake'}
+[0.005799] (cvengers_challenge) JobProgress: {'identifier': 'cvengers_challenge', 'progress': 'build'}
+[0.005811] (cvengers_challenge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lzs/CVengers_challenge/build/cvengers_challenge', '--', '-j24', '-l24'], 'cwd': '/home/lzs/CVengers_challenge/build/cvengers_challenge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'lzs'), ('LC_TIME', 'zh_CN.UTF-8'), ('DDSGEN', '/home/lzs/fastdds_ws/src/fastddsgen/scripts'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lzs/Vision_Arena_2025/install/target_model_pkg/lib:/home/lzs/Vision_Arena_2025/install/stop/lib:/home/lzs/Vision_Arena_2025/install/sin/lib:/home/lzs/Vision_Arena_2025/install/rm_run/lib:/home/lzs/Vision_Arena_2025/install/rect_move/lib:/home/lzs/Vision_Arena_2025/install/circle/lib:/home/lzs/Vision_Arena_2025/install/arrow_run/lib:/home/lzs/Vision_Arena_2025/install/referee_pkg/lib:/home/lzs/Vision_Arena_2025/install/camera/lib:/home/lzs/Vision_Arena_2025/install/pose_msg/lib:/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/lib:/home/lzs/Vision_Arena_2025/libtorch/lib:/home/lzs/fastdds_ws/install/fastdds/lib:/home/lzs/fastdds_ws/install/fastcdr/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/lzs'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2748'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=b5b0c5906fa166bc4825146e6929fcd5'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/lzs/CVengers_challenge/install:/home/lzs/fastdds_ws/install:/home/lzs/Vision_Arena_2025/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'lzs'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/lzs/fastdds_ws/install/foonathan_memory_vendor/lib/x86_64-linux-gnu/pkgconfig:/home/lzs/fastdds_ws/install/foonathan_memory_vendor/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'lzs'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models::/home/lzs/Vision_Arena_2025/resource/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/lzs/fastdds_ws/install/fastdds/bin:/opt/ros/humble/bin:/home/lzs/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lzs/fastdds_ws/gradle-6.4/bin'), ('SESSION_MANAGER', 'local/lzs-TX:@/tmp/.ICE-unix/2748,unix/lzs-TX:/tmp/.ICE-unix/2748'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d5b4ab9e_b7fb_410e_b464_3343d9f3583c'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.128'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('ROSDISTRO_INDEX_URL', 'https://mirrors.tuna.tsinghua.edu.cn/rosdistro/index-v4.yaml'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/lzs/CVengers_challenge/install/cvengers_challenge:/home/lzs/Vision_Arena_2025/install/target_model_pkg:/home/lzs/Vision_Arena_2025/install/stop:/home/lzs/Vision_Arena_2025/install/sin:/home/lzs/Vision_Arena_2025/install/rm_run:/home/lzs/Vision_Arena_2025/install/rect_pkg:/home/lzs/Vision_Arena_2025/install/rect_move:/home/lzs/Vision_Arena_2025/install/player_pkg:/home/lzs/Vision_Arena_2025/install/circle:/home/lzs/Vision_Arena_2025/install/arrow_run:/home/lzs/Vision_Arena_2025/install/armor_detector_pkg:/home/lzs/Vision_Arena_2025/install/referee_pkg:/home/lzs/Vision_Arena_2025/install/camera:/home/lzs/Vision_Arena_2025/install/pose_msg:/home/lzs/Vision_Arena_2025/install/number_recognition_pkg:/home/lzs/Vision_Arena_2025/install/camera_sim_pkg:/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11::/home/lzs/Vision_Arena_2025/resource'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/lzs/CVengers_challenge/build/cvengers_challenge'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=b5b0c5906fa166bc4825146e6929fcd5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lzs/Vision_Arena_2025/install/referee_pkg/local/lib/python3.10/dist-packages:/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/lzs/CVengers_challenge/install/cvengers_challenge:/home/lzs/Vision_Arena_2025/install/target_model_pkg:/home/lzs/Vision_Arena_2025/install/stop:/home/lzs/Vision_Arena_2025/install/sin:/home/lzs/Vision_Arena_2025/install/rm_run:/home/lzs/Vision_Arena_2025/install/rect_pkg:/home/lzs/Vision_Arena_2025/install/rect_move:/home/lzs/Vision_Arena_2025/install/player_pkg:/home/lzs/Vision_Arena_2025/install/circle:/home/lzs/Vision_Arena_2025/install/arrow_run:/home/lzs/Vision_Arena_2025/install/armor_detector_pkg:/home/lzs/Vision_Arena_2025/install/referee_pkg:/home/lzs/Vision_Arena_2025/install/camera:/home/lzs/Vision_Arena_2025/install/pose_msg:/home/lzs/Vision_Arena_2025/install/number_recognition_pkg:/home/lzs/Vision_Arena_2025/install/camera_sim_pkg:/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces:/home/lzs/fastdds_ws/install/fastdds:/home/lzs/fastdds_ws/install/foonathan_memory_vendor:/home/lzs/fastdds_ws/install/fastcdr:/opt/ros/humble')]), 'shell': False}
+[0.052133] (cvengers_challenge) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target armor_node\x1b[0m\n'}
+[0.069913] (cvengers_challenge) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/train_digit_model_cpp.dir/src/train_digit_model_libtorch.cpp.o\x1b[0m\n'}
+[0.098979] (cvengers_challenge) StdoutLine: {'line': b'[ 85%] Built target armor_node\n'}
+[0.099724] (-) TimerEvent: {}
+[0.200069] (-) TimerEvent: {}
+[0.300579] (-) TimerEvent: {}
+[0.401099] (-) TimerEvent: {}
+[0.501483] (-) TimerEvent: {}
+[0.604130] (-) TimerEvent: {}
+[0.704417] (-) TimerEvent: {}
+[0.804830] (-) TimerEvent: {}
+[0.905311] (-) TimerEvent: {}
+[1.005855] (-) TimerEvent: {}
+[1.106347] (-) TimerEvent: {}
+[1.206795] (-) TimerEvent: {}
+[1.307387] (-) TimerEvent: {}
+[1.407871] (-) TimerEvent: {}
+[1.508337] (-) TimerEvent: {}
+[1.608657] (-) TimerEvent: {}
+[1.709146] (-) TimerEvent: {}
+[1.809530] (-) TimerEvent: {}
+[1.909944] (-) TimerEvent: {}
+[2.010885] (-) TimerEvent: {}
+[2.111457] (-) TimerEvent: {}
+[2.212099] (-) TimerEvent: {}
+[2.312471] (-) TimerEvent: {}
+[2.412989] (-) TimerEvent: {}
+[2.513378] (-) TimerEvent: {}
+[2.614039] (-) TimerEvent: {}
+[2.714467] (-) TimerEvent: {}
+[2.814817] (-) TimerEvent: {}
+[2.915310] (-) TimerEvent: {}
+[3.015718] (-) TimerEvent: {}
+[3.116175] (-) TimerEvent: {}
+[3.217224] (-) TimerEvent: {}
+[3.317604] (-) TimerEvent: {}
+[3.420268] (-) TimerEvent: {}
+[3.520513] (-) TimerEvent: {}
+[3.620758] (-) TimerEvent: {}
+[3.721054] (-) TimerEvent: {}
+[3.821362] (-) TimerEvent: {}
+[3.883678] (cvengers_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid train()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.883810] (cvengers_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:223:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktrace\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Ktorch::jit\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.883947] (cvengers_challenge) StderrLine: {'line': b'  223 |                 traced_model = torch::jit::\x1b[01;31m\x1b[Ktrace\x1b[m\x1b[K(model, example_input);\n'}
+[3.883983] (cvengers_challenge) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.884020] (cvengers_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:223:44:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[3.884044] (cvengers_challenge) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/Functions.h:1269\x1b[m\x1b[K,\n'}
+[3.884064] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/ExpandUtils.h:4\x1b[m\x1b[K,\n'}
+[3.884089] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/input_metadata.h:3\x1b[m\x1b[K,\n'}
+[3.884108] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/function.h:7\x1b[m\x1b[K,\n'}
+[3.884124] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/custom_function.h:7\x1b[m\x1b[K,\n'}
+[3.884140] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/autograd.h:5\x1b[m\x1b[K,\n'}
+[3.884160] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/all.h:7\x1b[m\x1b[K,\n'}
+[3.884176] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/torch.h:3\x1b[m\x1b[K,\n'}
+[3.884193] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:1\x1b[m\x1b[K:\n'}
+[3.884209] (cvengers_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/ops/trace.h:26:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kat::trace\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.884226] (cvengers_challenge) StderrLine: {'line': b'   26 | inline at::Tensor \x1b[01;36m\x1b[Ktrace\x1b[m\x1b[K(const at::Tensor & self) {\n'}
+[3.884242] (cvengers_challenge) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.884259] (cvengers_challenge) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/opencv4/opencv2/opencv.hpp:52\x1b[m\x1b[K,\n'}
+[3.884275] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:3\x1b[m\x1b[K:\n'}
+[3.884293] (cvengers_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/opencv4/opencv2/core.hpp:1817:21:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kcv::trace\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.884310] (cvengers_challenge) StderrLine: {'line': b' 1817 | CV_EXPORTS_W Scalar \x1b[01;36m\x1b[Ktrace\x1b[m\x1b[K(InputArray mtx);\n'}
+[3.884326] (cvengers_challenge) StderrLine: {'line': b'      |                     \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.884342] (cvengers_challenge) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/jit/ir/ir.h:18\x1b[m\x1b[K,\n'}
+[3.884359] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/jit/api/function_impl.h:4\x1b[m\x1b[K,\n'}
+[3.884375] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/jit/api/method.h:7\x1b[m\x1b[K,\n'}
+[3.884391] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/jit/api/object.h:6\x1b[m\x1b[K,\n'}
+[3.884407] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/jit/api/module.h:4\x1b[m\x1b[K,\n'}
+[3.884423] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6\x1b[m\x1b[K,\n'}
+[3.884439] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/serialize/archive.h:3\x1b[m\x1b[K,\n'}
+[3.884455] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/data/samplers/serialize.h:4\x1b[m\x1b[K,\n'}
+[3.884471] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/data/samplers.h:8\x1b[m\x1b[K,\n'}
+[3.884489] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/data/datasets/chunk.h:7\x1b[m\x1b[K,\n'}
+[3.884505] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/data/datasets.h:4\x1b[m\x1b[K,\n'}
+[3.884522] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/data.h:4\x1b[m\x1b[K,\n'}
+[3.884537] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/all.h:9\x1b[m\x1b[K,\n'}
+[3.884554] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/torch.h:3\x1b[m\x1b[K,\n'}
+[3.884569] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:1\x1b[m\x1b[K:\n'}
+[3.884586] (cvengers_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/core/interned_strings.h:354:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kc10::aten::trace\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.884604] (cvengers_challenge) StderrLine: {'line': b'  354 | \x1b[01;36m\x1b[KFORALL_NS_SYMBOLS\x1b[m\x1b[K(DEFINE_SYMBOL)\n'}
+[3.884620] (cvengers_challenge) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.884636] (cvengers_challenge) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/MethodOperators.h:410\x1b[m\x1b[K,\n'}
+[3.884652] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/core/TensorBody.h:41\x1b[m\x1b[K,\n'}
+[3.884667] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/core/Tensor.h:3\x1b[m\x1b[K,\n'}
+[3.884682] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/Tensor.h:3\x1b[m\x1b[K,\n'}
+[3.884698] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/function_hook.h:3\x1b[m\x1b[K,\n'}
+[3.884713] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/cpp_hook.h:2\x1b[m\x1b[K,\n'}
+[3.884728] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/variable.h:6\x1b[m\x1b[K,\n'}
+[3.884743] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/autograd.h:3\x1b[m\x1b[K,\n'}
+[3.884758] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/autograd.h:3\x1b[m\x1b[K,\n'}
+[3.884774] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/all.h:7\x1b[m\x1b[K,\n'}
+[3.884789] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/torch.h:3\x1b[m\x1b[K,\n'}
+[3.884805] (cvengers_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:1\x1b[m\x1b[K:\n'}
+[3.884820] (cvengers_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/ops/trace_ops.h:17:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kat::_ops::trace\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.884836] (cvengers_challenge) StderrLine: {'line': b'   17 | struct TORCH_API \x1b[01;36m\x1b[Ktrace\x1b[m\x1b[K {\n'}
+[3.884852] (cvengers_challenge) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.885983] (cvengers_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.886133] (cvengers_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:242:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kargc\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.886197] (cvengers_challenge) StderrLine: {'line': b'  242 | int main(\x1b[01;35m\x1b[Kint argc\x1b[m\x1b[K, char** argv) {\n'}
+[3.886244] (cvengers_challenge) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K~~~~^~~~\x1b[m\x1b[K\n'}
+[3.886288] (cvengers_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:242:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kargv\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.886333] (cvengers_challenge) StderrLine: {'line': b'  242 | int main(int argc, \x1b[01;35m\x1b[Kchar** argv\x1b[m\x1b[K) {\n'}
+[3.886373] (cvengers_challenge) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[3.921530] (-) TimerEvent: {}
+[4.021923] (-) TimerEvent: {}
+[4.122310] (-) TimerEvent: {}
+[4.222625] (-) TimerEvent: {}
+[4.323013] (-) TimerEvent: {}
+[4.423411] (-) TimerEvent: {}
+[4.523802] (-) TimerEvent: {}
+[4.624176] (-) TimerEvent: {}
+[4.724572] (-) TimerEvent: {}
+[4.824954] (-) TimerEvent: {}
+[4.925380] (-) TimerEvent: {}
+[5.025791] (-) TimerEvent: {}
+[5.126167] (-) TimerEvent: {}
+[5.226565] (-) TimerEvent: {}
+[5.326992] (-) TimerEvent: {}
+[5.427394] (-) TimerEvent: {}
+[5.527784] (-) TimerEvent: {}
+[5.628167] (-) TimerEvent: {}
+[5.728583] (-) TimerEvent: {}
+[5.828969] (-) TimerEvent: {}
+[5.929361] (-) TimerEvent: {}
+[6.029741] (-) TimerEvent: {}
+[6.130226] (-) TimerEvent: {}
+[6.230677] (-) TimerEvent: {}
+[6.331147] (-) TimerEvent: {}
+[6.421531] (cvengers_challenge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/train_digit_model_cpp.dir/build.make:76\xef\xbc\x9aCMakeFiles/train_digit_model_cpp.dir/src/train_digit_model_libtorch.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[6.421993] (cvengers_challenge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:165\xef\xbc\x9aCMakeFiles/train_digit_model_cpp.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[6.422132] (cvengers_challenge) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[6.424117] (cvengers_challenge) CommandEnded: {'returncode': 2}
+[6.429472] (cvengers_challenge) JobEnded: {'identifier': 'cvengers_challenge', 'rc': 2}
+[6.431190] (-) TimerEvent: {}
+[6.439633] (-) EventReactorShutdown: {}

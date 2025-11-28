@@ -271,6 +271,30 @@ src/src/image_processor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_node.dir/build.make CMakeFiles/armor_node.dir/src/src/image_processor.cpp.s
 .PHONY : src/src/image_processor.cpp.s
 
+src/src/libtorch_digit_recognizer.o: src/src/libtorch_digit_recognizer.cpp.o
+.PHONY : src/src/libtorch_digit_recognizer.o
+
+# target to build an object file
+src/src/libtorch_digit_recognizer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_node.dir/build.make CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o
+.PHONY : src/src/libtorch_digit_recognizer.cpp.o
+
+src/src/libtorch_digit_recognizer.i: src/src/libtorch_digit_recognizer.cpp.i
+.PHONY : src/src/libtorch_digit_recognizer.i
+
+# target to preprocess a source file
+src/src/libtorch_digit_recognizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_node.dir/build.make CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.i
+.PHONY : src/src/libtorch_digit_recognizer.cpp.i
+
+src/src/libtorch_digit_recognizer.s: src/src/libtorch_digit_recognizer.cpp.s
+.PHONY : src/src/libtorch_digit_recognizer.s
+
+# target to generate assembly for a file
+src/src/libtorch_digit_recognizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_node.dir/build.make CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.s
+.PHONY : src/src/libtorch_digit_recognizer.cpp.s
+
 src/train_digit_model_libtorch.o: src/train_digit_model_libtorch.cpp.o
 .PHONY : src/train_digit_model_libtorch.o
 
@@ -342,6 +366,9 @@ help:
 	@echo "... src/src/image_processor.o"
 	@echo "... src/src/image_processor.i"
 	@echo "... src/src/image_processor.s"
+	@echo "... src/src/libtorch_digit_recognizer.o"
+	@echo "... src/src/libtorch_digit_recognizer.i"
+	@echo "... src/src/libtorch_digit_recognizer.s"
 	@echo "... src/train_digit_model_libtorch.o"
 	@echo "... src/train_digit_model_libtorch.i"
 	@echo "... src/train_digit_model_libtorch.s"

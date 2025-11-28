@@ -1,0 +1,65 @@
+[01m[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:[m[K In function ‘[01m[Kvoid train()[m[K’:
+[01m[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:223:44:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrace[m[K’ is not a member of ‘[01m[Ktorch::jit[m[K’
+  223 |                 traced_model = torch::jit::[01;31m[Ktrace[m[K(model, example_input);
+      |                                            [01;31m[K^~~~~[m[K
+[01m[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:223:44:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/Functions.h:1269[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/ExpandUtils.h:4[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/input_metadata.h:3[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/function.h:7[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/custom_function.h:7[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/autograd.h:5[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/all.h:7[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/torch.h:3[m[K,
+                 from [01m[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:1[m[K:
+[01m[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/ops/trace.h:26:19:[m[K [01;36m[Knote: [m[K  ‘[01m[Kat::trace[m[K’
+   26 | inline at::Tensor [01;36m[Ktrace[m[K(const at::Tensor & self) {
+      |                   [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:3[m[K:
+[01m[K/usr/include/opencv4/opencv2/core.hpp:1817:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::trace[m[K’
+ 1817 | CV_EXPORTS_W Scalar [01;36m[Ktrace[m[K(InputArray mtx);
+      |                     [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/jit/ir/ir.h:18[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/jit/api/function_impl.h:4[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/jit/api/method.h:7[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/jit/api/object.h:6[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/jit/api/module.h:4[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/serialize/archive.h:3[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/data/samplers/serialize.h:4[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/data/samplers.h:8[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/data/datasets/chunk.h:7[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/data/datasets.h:4[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/data.h:4[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/all.h:9[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/torch.h:3[m[K,
+                 from [01m[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:1[m[K:
+[01m[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/core/interned_strings.h:354:1:[m[K [01;36m[Knote: [m[K  ‘[01m[Kc10::aten::trace[m[K’
+  354 | [01;36m[KFORALL_NS_SYMBOLS[m[K(DEFINE_SYMBOL)
+      | [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/MethodOperators.h:410[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/core/TensorBody.h:41[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/core/Tensor.h:3[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/Tensor.h:3[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/function_hook.h:3[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/cpp_hook.h:2[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/variable.h:6[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/autograd/autograd.h:3[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/autograd.h:3[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/all.h:7[m[K,
+                 from [01m[K/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include/torch/torch.h:3[m[K,
+                 from [01m[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:1[m[K:
+[01m[K/home/lzs/Vision_Arena_2025/libtorch/include/ATen/ops/trace_ops.h:17:18:[m[K [01;36m[Knote: [m[K  ‘[01m[Kat::_ops::trace[m[K’
+   17 | struct TORCH_API [01;36m[Ktrace[m[K {
+      |                  [01;36m[K^~~~~[m[K
+[01m[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:242:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  242 | int main([01;35m[Kint argc[m[K, char** argv) {
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/lzs/CVengers_challenge/src/train_digit_model_libtorch.cpp:242:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  242 | int main(int argc, [01;35m[Kchar** argv[m[K) {
+      |                    [01;35m[K~~~~~~~^~~~[m[K
+gmake[2]: *** [CMakeFiles/train_digit_model_cpp.dir/build.make:76：CMakeFiles/train_digit_model_cpp.dir/src/train_digit_model_libtorch.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/train_digit_model_cpp.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

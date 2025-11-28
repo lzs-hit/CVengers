@@ -13,7 +13,8 @@
                 "/opt/ros/humble/include/rclcpp",
                 "/opt/ros/humble/include/rcl",
                 "/opt/ros/humble/include/rcutils",
-                "/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include"
+                "/home/lzs/Vision_Arena_2025/libtorch/include/torch/csrc/api/include",
+                "/home/lzs/Vision_Arena_2025/libtorch/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

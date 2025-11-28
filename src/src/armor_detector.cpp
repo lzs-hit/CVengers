@@ -34,11 +34,13 @@ cv::Mat ArmorDetector::process_frame(const cv::Mat& image) {
             std::vector<cv::Point2f> armor_points = fine_detection(armor_mask);
             
             if (!armor_points.empty()) {
+                int ID=Armor_ID(armor_points,display_image);
                 // 步骤4：可视化 - 在图像上绘制检测结果
-                display_image = image_processor_->draw_detection_results(display_image, armor_points, i);
+                display_image = image_processor_->draw_detection_results(display_image, armor_points, ID);
                 
                 // 步骤5：发布检测结果
                 publish_armor_result(armor_points);
+                Armor_ID(armor_points,display_image);
                 
             } else {
                 RCLCPP_WARN(node_->get_logger(), "装甲板 %zu 的坐标提取失败", i);
@@ -49,6 +51,13 @@ cv::Mat ArmorDetector::process_frame(const cv::Mat& image) {
     }
     
     return display_image;
+}
+
+int ArmorDetector::Armor_ID(std::vector<cv::Point2f> armor_points,cv::Mat display_image){
+    cv::Mat img=WarpMat(display_image,armor_points);
+    int i=num_recognition(img);
+
+    return i;
 }
 
 void ArmorDetector::publish_armor_result(const std::vector<cv::Point2f>& armor_points) {
@@ -243,7 +252,10 @@ cv::Mat ArmorDetector::WarpMat(const cv::Mat& img,const std::vector<cv::Point2f>
     for(int i=0;i<4;i++){
         src[i]=light_points[i];
     }
-	cv::Point2f dst[4] = { {-0.4375*w,0.75*h},{0.4375*w,0.75*h},{0.4375*w,0.25*h},{-0.4375*w,0.25*h} };
+	cv::Point2f dst[4] = { {static_cast<float> (-0.4375*w),static_cast<float> (0.75*h)},
+                            {static_cast<float>(1.4375*w),static_cast<float>(0.75*h)},
+                            {static_cast<float>(1.4375*w),static_cast<float>(0.25*h)},
+                            {static_cast<float>(-0.4375*w),static_cast<float>(0.25*h)} };
 
     matrix = getPerspectiveTransform(src, dst);
 	warpPerspective(img, imgWarp, matrix, cv::Point(w, h));
@@ -251,11 +263,68 @@ cv::Mat ArmorDetector::WarpMat(const cv::Mat& img,const std::vector<cv::Point2f>
     return imgWarp;
 }
 
-cv::Mat ArmorDetector::testshow(const cv::Mat& image){
-    std::vector<cv::Point2f> light_points=fine_detection(image);
-    
-    cv::Mat result;
-    result=WarpMat(image,light_points);
-
-    return result;
+void ArmorDetector::set_digit_recognizer(std::shared_ptr<LibtorchDigitRecognizer> recognizer) {
+    digit_recognizer_ = recognizer;
+    if (digit_recognizer_ && digit_recognizer_->isModelLoaded()) {
+        RCLCPP_INFO(node_->get_logger(), "数字识别器设置成功，模型已加载");
+    } else if (digit_recognizer_) {
+        RCLCPP_WARN(node_->get_logger(), "数字识别器已设置，但模型未加载");
+    } else {
+        RCLCPP_ERROR(node_->get_logger(), "数字识别器设置失败：传入空指针");
+    }
 }
+
+int ArmorDetector::num_recognition(cv::Mat img) {
+    // 检查数字识别器是否可用
+    if (!digit_recognizer_ || !digit_recognizer_->isModelLoaded()) {
+        RCLCPP_WARN(node_->get_logger(), "数字识别器未初始化，无法进行数字识别");
+        return -1;
+    }
+
+    // 检查输入图像是否有效
+    if (img.empty()) {
+        RCLCPP_ERROR(node_->get_logger(), "输入图像为空，无法进行数字识别");
+        return -1;
+    }
+
+    // 记录输入图像信息（用于调试）
+    RCLCPP_DEBUG(node_->get_logger(), 
+                "数字识别输入图像: %dx%d, 通道数: %d", 
+                img.cols, img.rows, img.channels());
+
+    try {
+        double confidence = 0.0;
+        int recognized_digit = digit_recognizer_->recognizeDigit(img, confidence);
+
+        if (recognized_digit != -1) {
+            RCLCPP_INFO(node_->get_logger(), 
+                       "数字识别成功: %d (置信度: %.3f)", 
+                       recognized_digit, confidence);
+            
+            // 如果置信度较低，可以添加警告
+            if (confidence < 0.7) {
+                RCLCPP_WARN(node_->get_logger(), 
+                           "数字识别置信度较低: %.3f", confidence);
+            }
+            
+            return recognized_digit;
+        } else {
+            RCLCPP_WARN(node_->get_logger(), "数字识别失败");
+            return -1;
+        }
+
+    } catch (const std::exception& e) {
+        RCLCPP_ERROR(node_->get_logger(), 
+                    "数字识别过程中发生异常: %s", e.what());
+        return -1;
+    }
+}
+
+// cv::Mat ArmorDetector::testshow(const cv::Mat& image){
+//     std::vector<cv::Point2f> light_points=fine_detection(image);
+    
+//     cv::Mat result;
+//     result=WarpMat(image,light_points);
+
+//     return result;
+// }

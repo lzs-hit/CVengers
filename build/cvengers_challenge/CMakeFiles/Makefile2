@@ -137,12 +137,12 @@ CMakeFiles/cvengers_challenge_uninstall.dir/clean:
 CMakeFiles/armor_node.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_node.dir/build.make CMakeFiles/armor_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_node.dir/build.make CMakeFiles/armor_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles --progress-num=1,2,3,4 "Built target armor_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles --progress-num=1,2,3,4,5 "Built target armor_node"
 .PHONY : CMakeFiles/armor_node.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/armor_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles 0
 .PHONY : CMakeFiles/armor_node.dir/rule
@@ -163,7 +163,7 @@ CMakeFiles/armor_node.dir/clean:
 CMakeFiles/train_digit_model_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/train_digit_model_cpp.dir/build.make CMakeFiles/train_digit_model_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/train_digit_model_cpp.dir/build.make CMakeFiles/train_digit_model_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles --progress-num=5,6 "Built target train_digit_model_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles --progress-num=6,7 "Built target train_digit_model_cpp"
 .PHONY : CMakeFiles/train_digit_model_cpp.dir/all
 
 # Build rule for subdir invocation for target.
