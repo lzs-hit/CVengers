@@ -54,30 +54,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cvengers_challenge/armor_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cvengers_challenge/armor_node"
-         OLD_RPATH "/lib/intel64:/lib/intel64_win:/lib/win-x64:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/lzs/Vision_Arena_2025/libtorch/lib:/home/lzs/Vision_Arena_2025/install/referee_pkg/lib:/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/lib:/home/lzs/Vision_Arena_2025/install/pose_msg/lib:/home/lzs/fastdds_ws/install/fastcdr/lib:"
+         OLD_RPATH "/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/lzs/Vision_Arena_2025/install/referee_pkg/lib:/home/lzs/Vision_Arena_2025/install/pose_msg/lib:/home/lzs/fastdds_ws/install/fastcdr/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cvengers_challenge/armor_node")
-    endif()
-  endif()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cvengers_challenge/train_digit_model_cpp" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cvengers_challenge/train_digit_model_cpp")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cvengers_challenge/train_digit_model_cpp"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cvengers_challenge" TYPE EXECUTABLE FILES "/home/lzs/CVengers_challenge/build/cvengers_challenge/train_digit_model_cpp")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cvengers_challenge/train_digit_model_cpp" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cvengers_challenge/train_digit_model_cpp")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cvengers_challenge/train_digit_model_cpp"
-         OLD_RPATH "/lib/intel64:/lib/intel64_win:/lib/win-x64:/opt/ros/humble/lib:/home/lzs/Vision_Arena_2025/libtorch/lib:/home/lzs/fastdds_ws/install/fastcdr/lib:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cvengers_challenge/train_digit_model_cpp")
     endif()
   endif()
 endif()

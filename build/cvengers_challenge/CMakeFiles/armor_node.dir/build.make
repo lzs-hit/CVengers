@@ -111,26 +111,11 @@ CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzs/CVengers_challenge/src/src/armor_detector.cpp -o CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.s
 
-CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o: CMakeFiles/armor_node.dir/flags.make
-CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o: ../../src/src/libtorch_digit_recognizer.cpp
-CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o: CMakeFiles/armor_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o -MF CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o.d -o CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o -c /home/lzs/CVengers_challenge/src/src/libtorch_digit_recognizer.cpp
-
-CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzs/CVengers_challenge/src/src/libtorch_digit_recognizer.cpp > CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.i
-
-CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzs/CVengers_challenge/src/src/libtorch_digit_recognizer.cpp -o CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.s
-
 # Object files for target armor_node
 armor_node_OBJECTS = \
 "CMakeFiles/armor_node.dir/src/vision_node.cpp.o" \
 "CMakeFiles/armor_node.dir/src/src/image_processor.cpp.o" \
-"CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.o" \
-"CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o"
+"CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.o"
 
 # External object files for target armor_node
 armor_node_EXTERNAL_OBJECTS =
@@ -138,7 +123,6 @@ armor_node_EXTERNAL_OBJECTS =
 armor_node: CMakeFiles/armor_node.dir/src/vision_node.cpp.o
 armor_node: CMakeFiles/armor_node.dir/src/src/image_processor.cpp.o
 armor_node: CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.o
-armor_node: CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o
 armor_node: CMakeFiles/armor_node.dir/build.make
 armor_node: /opt/ros/humble/lib/librclcpp.so
 armor_node: /opt/ros/humble/lib/libament_index_cpp.so
@@ -1299,9 +1283,6 @@ armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection
 armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
 armor_node: /usr/lib/x86_64-linux-gnu/libpython3.10.so
-armor_node: /home/lzs/Vision_Arena_2025/libtorch/lib/libtorch.so
-armor_node: /home/lzs/Vision_Arena_2025/libtorch/lib/libc10.so
-armor_node: /home/lzs/Vision_Arena_2025/libtorch/lib/libkineto.a
 armor_node: /opt/ros/humble/lib/libcv_bridge.so
 armor_node: /opt/ros/humble/lib/x86_64-linux-gnu/libimage_transport.so
 armor_node: /home/lzs/Vision_Arena_2025/install/referee_pkg/lib/libreferee_pkg__rosidl_typesupport_fastrtps_c.so
@@ -1310,12 +1291,6 @@ armor_node: /home/lzs/Vision_Arena_2025/install/referee_pkg/lib/libreferee_pkg__
 armor_node: /home/lzs/Vision_Arena_2025/install/referee_pkg/lib/libreferee_pkg__rosidl_typesupport_introspection_cpp.so
 armor_node: /home/lzs/Vision_Arena_2025/install/referee_pkg/lib/libreferee_pkg__rosidl_typesupport_cpp.so
 armor_node: /home/lzs/Vision_Arena_2025/install/referee_pkg/lib/libreferee_pkg__rosidl_generator_py.so
-armor_node: /home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/lib/libarmor_recognition_interfaces__rosidl_typesupport_fastrtps_c.so
-armor_node: /home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/lib/libarmor_recognition_interfaces__rosidl_typesupport_introspection_c.so
-armor_node: /home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/lib/libarmor_recognition_interfaces__rosidl_typesupport_fastrtps_cpp.so
-armor_node: /home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/lib/libarmor_recognition_interfaces__rosidl_typesupport_introspection_cpp.so
-armor_node: /home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/lib/libarmor_recognition_interfaces__rosidl_typesupport_cpp.so
-armor_node: /home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/lib/libarmor_recognition_interfaces__rosidl_generator_py.so
 armor_node: /home/lzs/Vision_Arena_2025/install/pose_msg/lib/libpose_msg__rosidl_typesupport_fastrtps_c.so
 armor_node: /home/lzs/Vision_Arena_2025/install/pose_msg/lib/libpose_msg__rosidl_typesupport_fastrtps_cpp.so
 armor_node: /home/lzs/Vision_Arena_2025/install/pose_msg/lib/libpose_msg__rosidl_typesupport_introspection_c.so
@@ -1400,8 +1375,6 @@ armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.
 armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
-armor_node: /home/lzs/Vision_Arena_2025/libtorch/lib/libc10.so
-armor_node: /home/lzs/Vision_Arena_2025/libtorch/lib/libkineto.a
 armor_node: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.5.4d
 armor_node: /usr/lib/x86_64-linux-gnu/libopencv_datasets.so.4.5.4d
 armor_node: /usr/lib/x86_64-linux-gnu/libopencv_plot.so.4.5.4d
@@ -1418,10 +1391,17 @@ armor_node: /usr/lib/x86_64-linux-gnu/libopencv_dnn.so.4.5.4d
 armor_node: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.4.5.4d
 armor_node: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.4.5.4d
 armor_node: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.5.4d
-armor_node: /home/lzs/Vision_Arena_2025/libtorch/lib/libc10.so
 armor_node: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.5.4d
 armor_node: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.5.4d
 armor_node: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d
+armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
+armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
+armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
+armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
+armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
+armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
+armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so
+armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 armor_node: /opt/ros/humble/lib/libmessage_filters.so
 armor_node: /opt/ros/humble/lib/librclcpp.so
 armor_node: /opt/ros/humble/lib/liblibstatistics_collector.so
@@ -1457,22 +1437,12 @@ armor_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
 armor_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_py.so
 armor_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_c.so
 armor_node: /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so
-armor_node: /home/lzs/Vision_Arena_2025/install/referee_pkg/lib/libreferee_pkg__rosidl_typesupport_c.so
-armor_node: /home/lzs/Vision_Arena_2025/install/referee_pkg/lib/libreferee_pkg__rosidl_generator_c.so
-armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
-armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
-armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
-armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
-armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
-armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
 armor_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
 armor_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
 armor_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
 armor_node: /usr/lib/x86_64-linux-gnu/libpython3.10.so
-armor_node: /home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/lib/libarmor_recognition_interfaces__rosidl_typesupport_c.so
-armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
-armor_node: /home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/lib/libarmor_recognition_interfaces__rosidl_generator_c.so
-armor_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so
+armor_node: /home/lzs/Vision_Arena_2025/install/referee_pkg/lib/libreferee_pkg__rosidl_typesupport_c.so
+armor_node: /home/lzs/Vision_Arena_2025/install/referee_pkg/lib/libreferee_pkg__rosidl_generator_c.so
 armor_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
 armor_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
 armor_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
@@ -1507,7 +1477,7 @@ armor_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 armor_node: /opt/ros/humble/lib/librcpputils.so
 armor_node: /opt/ros/humble/lib/librcutils.so
 armor_node: CMakeFiles/armor_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable armor_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable armor_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/armor_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

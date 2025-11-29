@@ -22,24 +22,9 @@ public:
 
         // 初始化图像处理工具
         image_processor_ = std::make_unique<ImageProcessor>();
-
-        // 初始化Libtorch数字识别器
-        auto digit_recognizer = std::make_shared<LibtorchDigitRecognizer>();
-        
-        // 设置模型路径
-        std::string model_path = "/home/lzs/CVengers_challenge/models/digit_model_libtorch.pt";
-        
-        RCLCPP_INFO(this->get_logger(), "加载数字识别模型: %s", model_path.c_str());
-        
-        if (digit_recognizer->loadModel(model_path)) {
-            RCLCPP_INFO(this->get_logger(), "数字识别模型加载成功");
-        } else {
-            RCLCPP_ERROR(this->get_logger(), "数字识别模型加载失败");
-        }
         
         // 初始化装甲板检测器
         armor_detector_ = std::make_unique<ArmorDetector>(this);
-        armor_detector_->set_digit_recognizer(digit_recognizer);
 
         // 创建图像订阅器
         image_sub_ = this->create_subscription<sensor_msgs::msg::Image>(
@@ -76,11 +61,9 @@ private:
             
             // 使用装甲板检测器处理图像
             auto display_image = armor_detector_->process_frame(image);
-            // auto display_image2 = armor_detector_->testshow(image);
 
             // 显示处理结果
             cv::imshow("Raw Image", display_image);
-            // cv::imshow("Test Image", display_image2);
             cv::waitKey(1);
 
         } catch (const cv_bridge::Exception &e) {
@@ -102,7 +85,6 @@ private:
     // 帧计数器
     int frame_count_ = 0;
 };
-
 
 #ifdef ARMORNODE_MAIN
 /**

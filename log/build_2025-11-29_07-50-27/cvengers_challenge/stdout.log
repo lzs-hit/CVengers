@@ -1,0 +1,5 @@
+[35m[1mConsolidate compiler generated dependencies of target train_digit_model_cpp[0m
+[ 14%] [32mBuilding CXX object CMakeFiles/armor_node.dir/src/vision_node.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/train_digit_model_cpp.dir/src/train_digit_model_libtorch.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.o[0m

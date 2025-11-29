@@ -1,5 +1,4 @@
 /home/lzs/CVengers_challenge/install/cvengers_challenge/lib/cvengers_challenge/armor_node
-/home/lzs/CVengers_challenge/install/cvengers_challenge/lib/cvengers_challenge/train_digit_model_cpp
 /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/launch/launch/shooter.launch.py
 /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/launch/launch/vision.launch.py
 /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/config/params.yaml

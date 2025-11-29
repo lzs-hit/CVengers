@@ -10,7 +10,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lzs/CVengers_challenge/src/src/armor_detector.cpp" "CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.o" "gcc" "CMakeFiles/armor_node.dir/src/src/armor_detector.cpp.o.d"
   "/home/lzs/CVengers_challenge/src/src/image_processor.cpp" "CMakeFiles/armor_node.dir/src/src/image_processor.cpp.o" "gcc" "CMakeFiles/armor_node.dir/src/src/image_processor.cpp.o.d"
-  "/home/lzs/CVengers_challenge/src/src/libtorch_digit_recognizer.cpp" "CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o" "gcc" "CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o.d"
   "/home/lzs/CVengers_challenge/src/vision_node.cpp" "CMakeFiles/armor_node.dir/src/vision_node.cpp.o" "gcc" "CMakeFiles/armor_node.dir/src/vision_node.cpp.o.d"
   )
 

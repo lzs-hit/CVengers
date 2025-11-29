@@ -1,0 +1,24 @@
+[100%] Built target armor_node
+-- Install configuration: ""
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/lib/cvengers_challenge/armor_node
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/launch/launch
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/launch/launch/shooter.launch.py
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/launch/launch/vision.launch.py
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/config
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/config/params.yaml
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/ament_index/resource_index/package_run_dependencies/cvengers_challenge
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/ament_index/resource_index/parent_prefix_path/cvengers_challenge
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/environment/ament_prefix_path.sh
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/environment/path.sh
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/environment/path.dsv
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/local_setup.bash
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/local_setup.sh
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/local_setup.zsh
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/local_setup.dsv
+-- Installing: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/package.dsv
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/ament_index/resource_index/packages/cvengers_challenge
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/cmake/cvengers_challengeConfig.cmake
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/cmake/cvengers_challengeConfig-version.cmake
+-- Up-to-date: /home/lzs/CVengers_challenge/install/cvengers_challenge/share/cvengers_challenge/package.xml

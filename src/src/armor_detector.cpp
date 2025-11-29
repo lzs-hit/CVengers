@@ -1,8 +1,12 @@
 #include "armor_detector.h"
 #include <rclcpp/rclcpp.hpp>
+#include <filesystem>
+#include <algorithm>
 
 ArmorDetector::ArmorDetector(rclcpp::Node* node) : node_(node) {
     image_processor_ = std::make_unique<ImageProcessor>();
+    // 初始化时加载模板
+    load_templates_from_file();
 }
 
 void ArmorDetector::set_publisher(rclcpp::Publisher<referee_pkg::msg::MultiObject>::SharedPtr publisher) {
@@ -34,13 +38,12 @@ cv::Mat ArmorDetector::process_frame(const cv::Mat& image) {
             std::vector<cv::Point2f> armor_points = fine_detection(armor_mask);
             
             if (!armor_points.empty()) {
-                int ID=Armor_ID(armor_points,display_image);
+                int ID = Armor_ID(armor_points, display_image);
                 // 步骤4：可视化 - 在图像上绘制检测结果
                 display_image = image_processor_->draw_detection_results(display_image, armor_points, ID);
                 
                 // 步骤5：发布检测结果
                 publish_armor_result(armor_points);
-                Armor_ID(armor_points,display_image);
                 
             } else {
                 RCLCPP_WARN(node_->get_logger(), "装甲板 %zu 的坐标提取失败", i);
@@ -53,10 +56,9 @@ cv::Mat ArmorDetector::process_frame(const cv::Mat& image) {
     return display_image;
 }
 
-int ArmorDetector::Armor_ID(std::vector<cv::Point2f> armor_points,cv::Mat display_image){
-    cv::Mat img=WarpMat(display_image,armor_points);
-    int i=num_recognition(img);
-
+int ArmorDetector::Armor_ID(std::vector<cv::Point2f> armor_points, cv::Mat display_image) {
+    cv::Mat img = WarpMat(display_image, armor_points);
+    int i = num_recognition(img);
     return i;
 }
 
@@ -239,92 +241,152 @@ std::vector<cv::Point2f> ArmorDetector::calculate_armor_points(const std::vector
     return armor_points;
 }
 
-cv::Mat ArmorDetector::WarpMat(const cv::Mat& img,const std::vector<cv::Point2f>& light_points){
-    if (light_points.size() != 4) {
-        RCLCPP_ERROR(node_->get_logger(), "未能提取出数字影像");
+cv::Mat ArmorDetector::WarpMat(const cv::Mat& img, const std::vector<cv::Point2f>& armor_points) {
+    if (armor_points.size() != 4) {
+        RCLCPP_ERROR(node_->get_logger(), "角点数量错误，需要4个点");
         return cv::Mat();
     }
 
     cv::Mat matrix, imgWarp;
-	float w = 128, h = 128;
+    float w = 128, h = 128;
 
-    cv::Point2f src[4] ;
-    for(int i=0;i<4;i++){
-        src[i]=light_points[i];
+    cv::Point2f src[4];
+    for(int i = 0; i < 4; i++) {
+        src[i] = armor_points[i];
     }
-	cv::Point2f dst[4] = { {static_cast<float> (-0.4375*w),static_cast<float> (0.75*h)},
-                            {static_cast<float>(1.4375*w),static_cast<float>(0.75*h)},
-                            {static_cast<float>(1.4375*w),static_cast<float>(0.25*h)},
-                            {static_cast<float>(-0.4375*w),static_cast<float>(0.25*h)} };
+    
+    cv::Point2f dst[4] = { 
+        cv::Point2f(0, h),
+        cv::Point2f(w, h),  
+        cv::Point2f(w, 0),
+        cv::Point2f(0, 0)
+    };
 
-    matrix = getPerspectiveTransform(src, dst);
-	warpPerspective(img, imgWarp, matrix, cv::Point(w, h));
+    matrix = cv::getPerspectiveTransform(src, dst);
+    cv::warpPerspective(img, imgWarp, matrix, cv::Size(w, h));
 
     return imgWarp;
 }
 
-void ArmorDetector::set_digit_recognizer(std::shared_ptr<LibtorchDigitRecognizer> recognizer) {
-    digit_recognizer_ = recognizer;
-    if (digit_recognizer_ && digit_recognizer_->isModelLoaded()) {
-        RCLCPP_INFO(node_->get_logger(), "数字识别器设置成功，模型已加载");
-    } else if (digit_recognizer_) {
-        RCLCPP_WARN(node_->get_logger(), "数字识别器已设置，但模型未加载");
-    } else {
-        RCLCPP_ERROR(node_->get_logger(), "数字识别器设置失败：传入空指针");
+void ArmorDetector::load_templates_from_file(const std::string& template_dir) {
+    number_templates_.clear();
+    
+    for (int i = 0; i < 10; i++) {
+        std::string filename = template_dir + std::to_string(i) + ".png";
+        cv::Mat template_img = cv::imread(filename, cv::IMREAD_GRAYSCALE);
+        
+        if (template_img.empty()) {
+            RCLCPP_WARN(node_->get_logger(), "无法加载模板文件: %s", filename.c_str());
+            cv::Mat backup_template = cv::Mat::zeros(30, 20, CV_8UC1);
+            cv::putText(backup_template, std::to_string(i), cv::Point(5, 20), 
+                       cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(255), 2);
+            number_templates_.push_back(backup_template);
+            RCLCPP_INFO(node_->get_logger(), "为数字 %d 创建备用模板", i);
+            continue;
+        }
+        
+        cv::threshold(template_img, template_img, 128, 255, cv::THRESH_BINARY);
+        number_templates_.push_back(template_img);
+        RCLCPP_DEBUG(node_->get_logger(), "成功加载数字 %d 模板, 尺寸: %dx%d", 
+                    i, template_img.cols, template_img.rows);
     }
+    
+    templates_loaded_ = true;
+    RCLCPP_INFO(node_->get_logger(), "成功加载 %zu 个数字模板", number_templates_.size());
+}
+
+cv::Mat ArmorDetector::preprocess_number_image(const cv::Mat& number_roi) {
+    cv::Mat processed;
+    
+    if (number_roi.empty()) {
+        RCLCPP_WARN(node_->get_logger(), "数字ROI图像为空");
+        return processed;
+    }
+    
+    if (number_roi.channels() == 3) {
+        cv::cvtColor(number_roi, processed, cv::COLOR_BGR2GRAY);
+    } else {
+        processed = number_roi.clone();
+    }
+    
+    cv::threshold(processed, processed, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
+    
+    cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(2, 2));
+    cv::morphologyEx(processed, processed, cv::MORPH_OPEN, kernel);
+    
+    return processed;
 }
 
 int ArmorDetector::num_recognition(cv::Mat img) {
-    // 检查数字识别器是否可用
-    if (!digit_recognizer_ || !digit_recognizer_->isModelLoaded()) {
-        RCLCPP_WARN(node_->get_logger(), "数字识别器未初始化，无法进行数字识别");
+    if (!templates_loaded_) {
+        load_templates_from_file();
+    }
+    
+    if (number_templates_.empty()) {
+        RCLCPP_ERROR(node_->get_logger(), "数字模板未加载，无法进行数字识别");
         return -1;
     }
-
-    // 检查输入图像是否有效
+    
     if (img.empty()) {
-        RCLCPP_ERROR(node_->get_logger(), "输入图像为空，无法进行数字识别");
+        RCLCPP_WARN(node_->get_logger(), "输入图像为空");
         return -1;
     }
-
-    // 记录输入图像信息（用于调试）
-    RCLCPP_DEBUG(node_->get_logger(), 
-                "数字识别输入图像: %dx%d, 通道数: %d", 
-                img.cols, img.rows, img.channels());
-
-    try {
-        double confidence = 0.0;
-        int recognized_digit = digit_recognizer_->recognizeDigit(img, confidence);
-
-        if (recognized_digit != -1) {
-            RCLCPP_INFO(node_->get_logger(), 
-                       "数字识别成功: %d (置信度: %.3f)", 
-                       recognized_digit, confidence);
+    
+    cv::Mat processed_img = preprocess_number_image(img);
+    
+    if (processed_img.empty()) {
+        RCLCPP_WARN(node_->get_logger(), "预处理后的图像为空");
+        return -1;
+    }
+    
+    std::vector<double> match_scores(10, 0.0);
+    int best_match = -1;
+    double best_score = 0.0;
+    
+    for (size_t i = 0; i < number_templates_.size(); i++) {
+        if (number_templates_[i].empty()) continue;
+        
+        cv::Mat template_img = number_templates_[i];
+        if (processed_img.rows < template_img.rows || processed_img.cols < template_img.cols) {
+            double scale_x = (double)processed_img.cols / template_img.cols;
+            double scale_y = (double)processed_img.rows / template_img.rows;
+            double scale = std::min(scale_x, scale_y) * 0.8;
+            cv::resize(template_img, template_img, cv::Size(), scale, scale, cv::INTER_AREA);
+        }
+        
+        cv::Mat result;
+        try {
+            cv::matchTemplate(processed_img, template_img, result, cv::TM_CCOEFF_NORMED);
             
-            // 如果置信度较低，可以添加警告
-            if (confidence < 0.7) {
-                RCLCPP_WARN(node_->get_logger(), 
-                           "数字识别置信度较低: %.3f", confidence);
+            double minVal, maxVal;
+            cv::Point minLoc, maxLoc;
+            cv::minMaxLoc(result, &minVal, &maxVal, &minLoc, &maxLoc);
+            
+            match_scores[i] = maxVal;
+            
+            if (maxVal > best_score && maxVal > match_threshold_) {
+                best_score = maxVal;
+                best_match = i;
             }
             
-            return recognized_digit;
-        } else {
-            RCLCPP_WARN(node_->get_logger(), "数字识别失败");
-            return -1;
+            RCLCPP_DEBUG(node_->get_logger(), "数字 %zu 匹配分数: %.3f", i, maxVal);
+        } catch (const cv::Exception& e) {
+            RCLCPP_WARN(node_->get_logger(), "模板匹配异常: %s", e.what());
+            continue;
         }
-
-    } catch (const std::exception& e) {
-        RCLCPP_ERROR(node_->get_logger(), 
-                    "数字识别过程中发生异常: %s", e.what());
+    }
+    
+    if (best_match != -1) {
+        RCLCPP_INFO(node_->get_logger(), "识别结果: 数字 %d, 置信度: %.3f", best_match, best_score);
+        return best_match;
+    } else {
+        auto max_iter = std::max_element(match_scores.begin(), match_scores.end());
+        if (max_iter != match_scores.end()) {
+            best_match = std::distance(match_scores.begin(), max_iter);
+            best_score = *max_iter;
+            RCLCPP_WARN(node_->get_logger(), "未找到超过阈值的匹配，最高分数: 数字 %d, 置信度: %.3f", 
+                       best_match, best_score);
+        }
         return -1;
     }
 }
-
-// cv::Mat ArmorDetector::testshow(const cv::Mat& image){
-//     std::vector<cv::Point2f> light_points=fine_detection(image);
-    
-//     cv::Mat result;
-//     result=WarpMat(image,light_points);
-
-//     return result;
-// }

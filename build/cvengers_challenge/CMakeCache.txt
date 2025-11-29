@@ -295,11 +295,11 @@ TORCH_LIBRARY:FILEPATH=/home/lzs/Vision_Arena_2025/libtorch/lib/libtorch.so
 //The directory containing a CMake configuration file for TinyXML2.
 TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 
-//No help, variable specified on the command line.
-Torch_DIR:UNINITIALIZED=/home/lzs/Vision_Arena_2025/libtorch/share/cmake/Torch
+//The directory containing a CMake configuration file for Torch.
+Torch_DIR:PATH=Torch_DIR-NOTFOUND
 
 //Path to a library.
-_lib:FILEPATH=/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/lib/libarmor_recognition_interfaces__rosidl_typesupport_fastrtps_cpp.so
+_lib:FILEPATH=/home/lzs/Vision_Arena_2025/install/referee_pkg/lib/libreferee_pkg__rosidl_typesupport_fastrtps_cpp.so
 
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/humble/share/ament_cmake/cmake
@@ -353,7 +353,7 @@ ament_cmake_version_DIR:PATH=/opt/ros/humble/share/ament_cmake_version/cmake
 ament_index_cpp_DIR:PATH=/opt/ros/humble/share/ament_index_cpp/cmake
 
 //The directory containing a CMake configuration file for armor_recognition_interfaces.
-armor_recognition_interfaces_DIR:PATH=/home/lzs/Vision_Arena_2025/install/armor_recognition_interfaces/share/armor_recognition_interfaces/cmake
+armor_recognition_interfaces_DIR:PATH=armor_recognition_interfaces_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for builtin_interfaces.
 builtin_interfaces_DIR:PATH=/opt/ros/humble/share/builtin_interfaces/cmake

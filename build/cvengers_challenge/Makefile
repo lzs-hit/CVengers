@@ -210,19 +210,6 @@ armor_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_node.dir/build.make CMakeFiles/armor_node.dir/build
 .PHONY : armor_node/fast
 
-#=============================================================================
-# Target rules for targets named train_digit_model_cpp
-
-# Build rule for target.
-train_digit_model_cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 train_digit_model_cpp
-.PHONY : train_digit_model_cpp
-
-# fast build rule for target.
-train_digit_model_cpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/train_digit_model_cpp.dir/build.make CMakeFiles/train_digit_model_cpp.dir/build
-.PHONY : train_digit_model_cpp/fast
-
 src/src/armor_detector.o: src/src/armor_detector.cpp.o
 .PHONY : src/src/armor_detector.o
 
@@ -271,54 +258,6 @@ src/src/image_processor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_node.dir/build.make CMakeFiles/armor_node.dir/src/src/image_processor.cpp.s
 .PHONY : src/src/image_processor.cpp.s
 
-src/src/libtorch_digit_recognizer.o: src/src/libtorch_digit_recognizer.cpp.o
-.PHONY : src/src/libtorch_digit_recognizer.o
-
-# target to build an object file
-src/src/libtorch_digit_recognizer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_node.dir/build.make CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.o
-.PHONY : src/src/libtorch_digit_recognizer.cpp.o
-
-src/src/libtorch_digit_recognizer.i: src/src/libtorch_digit_recognizer.cpp.i
-.PHONY : src/src/libtorch_digit_recognizer.i
-
-# target to preprocess a source file
-src/src/libtorch_digit_recognizer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_node.dir/build.make CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.i
-.PHONY : src/src/libtorch_digit_recognizer.cpp.i
-
-src/src/libtorch_digit_recognizer.s: src/src/libtorch_digit_recognizer.cpp.s
-.PHONY : src/src/libtorch_digit_recognizer.s
-
-# target to generate assembly for a file
-src/src/libtorch_digit_recognizer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_node.dir/build.make CMakeFiles/armor_node.dir/src/src/libtorch_digit_recognizer.cpp.s
-.PHONY : src/src/libtorch_digit_recognizer.cpp.s
-
-src/train_digit_model_libtorch.o: src/train_digit_model_libtorch.cpp.o
-.PHONY : src/train_digit_model_libtorch.o
-
-# target to build an object file
-src/train_digit_model_libtorch.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/train_digit_model_cpp.dir/build.make CMakeFiles/train_digit_model_cpp.dir/src/train_digit_model_libtorch.cpp.o
-.PHONY : src/train_digit_model_libtorch.cpp.o
-
-src/train_digit_model_libtorch.i: src/train_digit_model_libtorch.cpp.i
-.PHONY : src/train_digit_model_libtorch.i
-
-# target to preprocess a source file
-src/train_digit_model_libtorch.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/train_digit_model_cpp.dir/build.make CMakeFiles/train_digit_model_cpp.dir/src/train_digit_model_libtorch.cpp.i
-.PHONY : src/train_digit_model_libtorch.cpp.i
-
-src/train_digit_model_libtorch.s: src/train_digit_model_libtorch.cpp.s
-.PHONY : src/train_digit_model_libtorch.s
-
-# target to generate assembly for a file
-src/train_digit_model_libtorch.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/train_digit_model_cpp.dir/build.make CMakeFiles/train_digit_model_cpp.dir/src/train_digit_model_libtorch.cpp.s
-.PHONY : src/train_digit_model_libtorch.cpp.s
-
 src/vision_node.o: src/vision_node.cpp.o
 .PHONY : src/vision_node.o
 
@@ -359,19 +298,12 @@ help:
 	@echo "... cvengers_challenge_uninstall"
 	@echo "... uninstall"
 	@echo "... armor_node"
-	@echo "... train_digit_model_cpp"
 	@echo "... src/src/armor_detector.o"
 	@echo "... src/src/armor_detector.i"
 	@echo "... src/src/armor_detector.s"
 	@echo "... src/src/image_processor.o"
 	@echo "... src/src/image_processor.i"
 	@echo "... src/src/image_processor.s"
-	@echo "... src/src/libtorch_digit_recognizer.o"
-	@echo "... src/src/libtorch_digit_recognizer.i"
-	@echo "... src/src/libtorch_digit_recognizer.s"
-	@echo "... src/train_digit_model_libtorch.o"
-	@echo "... src/train_digit_model_libtorch.i"
-	@echo "... src/train_digit_model_libtorch.s"
 	@echo "... src/vision_node.o"
 	@echo "... src/vision_node.i"
 	@echo "... src/vision_node.s"

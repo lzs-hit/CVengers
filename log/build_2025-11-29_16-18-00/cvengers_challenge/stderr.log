@@ -1,0 +1,20 @@
+[31mCMake Error at CMakeLists.txt:25 (find_package):
+  By not providing "Findarmor_recognition_interfaces.cmake" in
+  CMAKE_MODULE_PATH this project has asked CMake to find a package
+  configuration file provided by "armor_recognition_interfaces", but CMake
+  did not find one.
+
+  Could not find a package configuration file provided by
+  "armor_recognition_interfaces" with any of the following names:
+
+    armor_recognition_interfacesConfig.cmake
+    armor_recognition_interfaces-config.cmake
+
+  Add the installation prefix of "armor_recognition_interfaces" to
+  CMAKE_PREFIX_PATH or set "armor_recognition_interfaces_DIR" to a directory
+  containing one of the above files.  If "armor_recognition_interfaces"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+[0m
+gmake: *** [Makefile:321：cmake_check_build_system] 错误 1

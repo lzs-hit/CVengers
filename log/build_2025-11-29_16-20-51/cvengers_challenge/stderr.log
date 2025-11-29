@@ -1,0 +1,14 @@
+[31mCMake Error at CMakeLists.txt:28 (find_package):
+  Could not find a package configuration file provided by "Torch" with any of
+  the following names:
+
+    TorchConfig.cmake
+    torch-config.cmake
+
+  Add the installation prefix of "Torch" to CMAKE_PREFIX_PATH or set
+  "Torch_DIR" to a directory containing one of the above files.  If "Torch"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+[0m
+gmake: *** [Makefile:321：cmake_check_build_system] 错误 1

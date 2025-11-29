@@ -1,7 +1,6 @@
 /home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles/uninstall.dir
 /home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles/cvengers_challenge_uninstall.dir
 /home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles/armor_node.dir
-/home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles/train_digit_model_cpp.dir
 /home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles/test.dir
 /home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles/edit_cache.dir
 /home/lzs/CVengers_challenge/build/cvengers_challenge/CMakeFiles/rebuild_cache.dir

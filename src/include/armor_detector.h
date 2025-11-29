@@ -1,7 +1,6 @@
 #pragma once
 
 #include "image_processor.h"
-#include "libtorch_digit_recognizer.h"
 #include <rclcpp/rclcpp.hpp>
 #include <referee_pkg/msg/multi_object.hpp>
 #include <vector>
@@ -31,7 +30,6 @@ public:
      * @return 处理后的图像（包含可视化结果）
      */
     cv::Mat process_frame(const cv::Mat& image);
-    // cv::Mat testshow(const cv::Mat& image);
 
     /**
      * @brief 发布装甲板检测结果
@@ -45,8 +43,6 @@ public:
      */
     void set_publisher(rclcpp::Publisher<referee_pkg::msg::MultiObject>::SharedPtr publisher);
 
-    void set_digit_recognizer(std::shared_ptr<LibtorchDigitRecognizer> recognizer);
-    int num_recognition(cv::Mat img);
 private:
     /**
      * @brief 粗检测模块：通过黑色区域检测初步定位装甲板位置
@@ -69,13 +65,41 @@ private:
      */
     std::vector<cv::Point2f> calculate_armor_points(const std::vector<cv::Point2f>& all_rectangles_points);
 
-    cv::Mat WarpMat(const cv::Mat& img,const std::vector<cv::Point2f>& armor_points);
-    int Armor_ID(std::vector<cv::Point2f> armor_points,cv::Mat display_image);
-    
     /**
-     * @brief 设置数字识别器
-     * @param recognizer Libtorch数字识别器
+     * @brief 透视变换，提取装甲板数字区域
+     * @param img 输入图像
+     * @param armor_points 装甲板四个角点
+     * @return 变换后的数字区域图像
      */
+    cv::Mat WarpMat(const cv::Mat& img, const std::vector<cv::Point2f>& armor_points);
+
+    /**
+     * @brief 装甲板数字识别流程
+     * @param armor_points 装甲板角点
+     * @param display_image 显示图像
+     * @return 识别到的数字ID
+     */
+    int Armor_ID(std::vector<cv::Point2f> armor_points, cv::Mat display_image);
+
+    /**
+     * @brief 数字识别核心方法
+     * @param img 数字区域图像
+     * @return 识别到的数字（0-9），-1表示识别失败
+     */
+    int num_recognition(cv::Mat img);
+
+    /**
+     * @brief 从文件加载数字模板
+     * @param template_dir 模板目录路径
+     */
+    void load_templates_from_file(const std::string& template_dir = "./templates/");
+
+    /**
+     * @brief 预处理数字图像
+     * @param number_roi 数字区域图像
+     * @return 预处理后的图像
+     */
+    cv::Mat preprocess_number_image(const cv::Mat& number_roi);
 
     // ROS2相关
     rclcpp::Node* node_;
@@ -84,8 +108,10 @@ private:
     // 图像处理工具
     std::unique_ptr<ImageProcessor> image_processor_;
 
-    //数字识别
-    std::shared_ptr<LibtorchDigitRecognizer> digit_recognizer_;
+    // 数字识别相关成员变量
+    std::vector<cv::Mat> number_templates_;  // 存储0-9的模板
+    bool templates_loaded_ = false;          // 模板是否已加载
+    double match_threshold_ = 0.3;           // 匹配阈值
     
     // 检测参数
     float expand_ratio_ = 1.1f;
